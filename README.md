@@ -1,2 +1,13 @@
-# Bitpal-space
-BitPal Space Fintech
+## Development
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Run
+
+```bash
+npm start
+```
