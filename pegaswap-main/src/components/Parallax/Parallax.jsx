@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 function Parallaxie (props) {
     return(
-        <Parallax className="custom-class" y={[-20, 20]} tagOuter="figure">
+        <Parallax className="custom-class" y={[-40, 0]} tagOuter="figure">
             <Image src={props.src}/>
         </Parallax>
     );
