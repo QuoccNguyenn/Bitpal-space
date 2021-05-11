@@ -10,7 +10,7 @@ function Team() {
             <ParallaxProvider>
                 <TeamContainer>
 
-                    <Parallaxie src="../../images/h1-parallax-img-2.jpeg"/>
+                    <Parallaxie src="../../images/h1-parallax-img-2.jpeg" className="paralaxie"/>
                     <TeamSlickContainer>
                         <TeamSlick/>
                     </TeamSlickContainer>    
@@ -23,16 +23,28 @@ function Team() {
 
 const TeamSection = styled.section`
     overflow: hidden;
+    max-height: 450px;
 `
 
 const TeamSlickContainer = styled.div`
-    margin-top: -80%;
+    position:absolute;
+    top:13%;
+    left:0;
+    right:0;
     padding: 3% 10%;
+    transform: translateY(-13%);
 `
 
 const TeamContainer = styled.div`
-    overlow: hidden;
+    overflow: hidden;
     position: relative;
+    
+    &.parallaxie{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
 `
 
 

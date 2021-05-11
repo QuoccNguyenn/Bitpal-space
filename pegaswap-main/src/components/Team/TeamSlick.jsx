@@ -34,7 +34,6 @@ function TeamSlick(){
         };
         return (
             <div>
-                <h2> Single Item</h2>
                 <Slider {...settings} style={{zIndex: '1'}}>
                     {state.members.map(item => (
                         <div>
