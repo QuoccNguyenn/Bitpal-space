@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import Team from '../../components/Team/Team'
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import OurTeam from '../../components/OurTeam/OurTeam';
+import Feature from '../../components/Feature/Feature';
 
 
 
@@ -23,6 +25,10 @@ const Home = ({title}) => {
           {/* A. nguyen */}
           <Team/>
 
+          <OurTeam/>
+
+          <Feature/>
+
 
         </WrapperHome>
 
@@ -32,7 +38,6 @@ const Home = ({title}) => {
 
 const Box_home = styled.section`  
   width:100%;
-  height:1000px;
   position: relative;
 `
 
@@ -70,13 +75,7 @@ const  Boxline = styled.div`
     }
 ` 
 
-const WrapperHome = styled.div`
-  position:absolute;
-  top:0;
-  width:100%;
-  height:100%;
-  z-index:1;
-`
+const WrapperHome = styled.div``
 
 
 
