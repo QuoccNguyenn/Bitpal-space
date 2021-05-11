@@ -14,6 +14,9 @@ const Home = ({title}) => {
             <div className="item-line"></div>
         </Boxline>
 
+        <WrapperHome>
+          
+        </WrapperHome>
 
     </Box_home>
   )
@@ -55,6 +58,8 @@ const  Boxline = styled.div`
         }
     }
 ` 
+
+const WrapperHome = styled.div``
 
 
 
