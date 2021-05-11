@@ -15,7 +15,7 @@ const Home = ({title}) => {
         </Boxline>
 
         <WrapperHome>
-          
+          demon
         </WrapperHome>
 
     </Box_home>
