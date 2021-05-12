@@ -37,3 +37,10 @@
     transform: rotate(360deg);
   }
 }
+
+.modal-content{
+  width: 80% !important;
+  margin: 0 auto;
+  background-color: transparent !important;
+  border: transparent solid;
+}

@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
+import {  Modal,  ModalBody } from 'reactstrap';
+import Iframe from 'react-iframe'
+
 
 const About = () =>{
+    const [modal, setModal] = useState(false);
+      const toggle = () => setModal(!modal);
 
 return(
     <Box_ab>
@@ -36,6 +41,19 @@ return(
                         <div className="img_video">
                             <img src="https://bitpal.qodeinteractive.com/wp-content/uploads/2018/07/h1-img-1.png" alt="" />
                         </div>
+                        
+                        <a href="#"  onClick={toggle}>
+                                <span></span>
+                        </a>
+
+                        <Modal isOpen={modal} fade={false} toggle={toggle} className="as" style={{maxWidth: '100vw', width: '100%',height:"100vh",margin:"0px",display:"flex", justifyContent: "center",alignItems:"center"}}>
+                        <ModalBody className="modal-video"  style={{width: '100%',height:"60vh" ,padding:"0px"}}>
+                        <Iframe url="https://player.vimeo.com/video/267777924?title=0&byline=0&portrait=0&autoplay=1;"
+                            width="100%"
+                            height="100%"
+                            />
+                        </ModalBody>
+                         </Modal>
                     </Video>
                 </Ab_right>
             </div>
@@ -46,6 +64,7 @@ return(
 
 const Box_ab = styled.section`
     width:100%;
+    overflow:hidden;
     padding:7.5rem 0;
 `
 
@@ -110,8 +129,30 @@ const Ab_right = styled.div`
 
 const Video = styled.div`
     width:100%;
-    height:500px;
-    background:red;
+    position: relative;
+
+    a{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        display:flex;
+        flex-direction:row;
+        justify-content:center;
+        align-items: center;
+
+        span{
+            border-bottom: 35px solid transparent;
+            border-top: 35px solid transparent;
+            border-left: 50px solid #aceb2f;
+            transition: ease all 1s;
+        }
+
+        :hover span{
+            transform: scale(1.2);
+        }
+    }
 `
 
 export default About
