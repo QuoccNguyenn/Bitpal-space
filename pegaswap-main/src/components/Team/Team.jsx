@@ -24,6 +24,26 @@ function Team() {
 const TeamSection = styled.section`
     overflow: hidden;
     max-height: 450px;
+
+    .slick-dots{
+        bottom: -20%;
+    }
+
+    .slick-active span.dot {
+        background: #aceb2f;
+    }
+
+    span.dot {
+        width: 60%;
+        height: 60%;
+        display: block;
+        border-radius: 50%;
+        background: #fff;
+    }
+
+    @media screen and (max-width: 768px){
+        max-height: 500px;
+    }
 `
 
 const TeamSlickContainer = styled.div`
@@ -33,6 +53,11 @@ const TeamSlickContainer = styled.div`
     right:0;
     padding: 3% 10%;
     transform: translateY(-13%);
+
+    @media screen and (max-width: 768px){
+        top: 8%;
+        transform: translateY(-8%);
+    }
 `
 
 const TeamContainer = styled.div`

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import HeaderTitle from '../HeaderTiltle/HeaderTitle';
 
 function Feature() {
 
@@ -47,10 +48,7 @@ function Feature() {
 
             <FeatureContainer>
 
-                <HeaderContainer className='row'>
-                    <HeaderContent>ICO Wallet Feature</HeaderContent>
-                    <Line/>
-                </HeaderContainer>
+                <HeaderTitle header='ICO Wallet Feature'/>
 
                 <BodyContainer>
                     <BodyInner>
@@ -123,43 +121,38 @@ const BannerLetter = styled.span`
 
 const FeatureContainer= styled.div``
 
-const HeaderContainer = styled.div`
-    margin-bottom: 10%;
-`
-
-const HeaderContent = styled.div`
-    width: 100%;
-    color: #fff;
-    font-size: 40px;
-    font-family: sans-serif;
-
-    text-align: center;
-    z-index: 1;
-`
-const Line = styled.div`
-    width: 40px;
-    height: 2px;
-    background: #aceb2f;
-
-    margin: auto;
-    z-index: 1;
-`
-
 const BodyContainer = styled.div``
 
 const BodyInner = styled.div`
     display: flex;
     flex-direction: row;
+
+    justify-content: center;
+
     @media screen and (max-width: 1024px){
         display: block!important;
+    }
+
+
+    @media screen and (max-width: 415px){
+        display: block!important;
+
+        margin-top: 25%;
     }
 `
 
 const ContentHolderLeft = styled.div`
     max-width: 35%;
     z-index: 2;
+
     @media screen and (max-width: 1024px){
         float: right;
+    }
+
+    @media screen and (max-width: 768px){
+        float: none;
+        max-width: 100%;
+        padding: 0 15%;
     }
 `
 
@@ -205,10 +198,15 @@ const ImageHolder = styled.div`
     max-width: 30%;
     z-index: 2;
     padding: 0 1%;
+
     @media screen and (max-width: 1024px){
         float: left;
         max-width: 40%;
         transform: translate(50%, 40%);
+    }
+
+    @media screen and (max-width: 768px){
+        display: none;
     }
 `
 
@@ -217,8 +215,15 @@ const CenterImage = styled.img``
 const ContentHolderRight = styled.div`
     max-width: 35%;
     z-index: 2;
+
     @media screen and (max-width: 1024px){
         float: right;
+    }
+
+    @media screen and (max-width: 768px){
+        float: none;
+        max-width: 100%;
+        padding: 0 15%;
     }
 `
 
