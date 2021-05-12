@@ -190,13 +190,17 @@ const BodyContainer = styled.div`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: start;
     margin-top: 10%;
     
     @media screen and (min-width: 1500px){
         .advistors{
             max-width: 20%;
         }
+    }
+
+    @media screen and (max-width: 768px){
+        justify-content: center;
     }
 `
 
