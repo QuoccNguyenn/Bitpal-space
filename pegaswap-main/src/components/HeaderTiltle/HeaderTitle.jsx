@@ -11,7 +11,7 @@ function HeaderTitle(props) {
 }
 
 const HeaderContainer = styled.div`
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 `
 
 const HeaderContent = styled.div`

@@ -62,7 +62,7 @@ function Partner() {
     return(
         <PartnerSection>
             <ParallaxProvider>
-                <PartnerContainer className='container'>
+                <PartnerContainer>
                     <Parallaxie src='../../images/h1-parallax-img-3.jpeg'/>
 
                     <BodyContainer>
@@ -89,15 +89,51 @@ function Partner() {
 
 const PartnerSection = styled.section`
     overflow: hidden;
+    clear: both;
+    @media screen and (max-width: 1024px){
+        max-height: 1024px;
+    }
+    @media screen and (max-width: 768px){
+        max-height: 1110px;
+    }
 `
 const PartnerContainer = styled.div`
     position: relative;
+
+    @media screen and (max-width: 1024px){
+        img{
+            max-width: 184%;
+            margin-left: -20%;
+        }
+    }
+
+    @media screen and (max-width: 768px){
+        img{
+            max-width: 384%;
+            margin-left: -100%;
+        }
+    }
+
+    @media screen and (max-width:415px){
+        img{
+            max-width: 460%;
+            margin-left: -200%;
+        }
+    }
 `
 
 const BodyContainer = styled.div`
     padding-top: 5%;
     position: absolute;
     top: 0;
+
+    @media screen and (max-width: 1024px){
+        padding-top: 1%;
+    }
+
+    @media screen and (max-width: 768px){
+        padding-top: 5%;
+    }
 `
 
 const BodyBrand = styled.div`
@@ -126,10 +162,19 @@ const Brand = styled.div`
             display: block;
         }
     }
+
+    @media screen and (max-width: 1024px){
+        width: 33%;
+    }
+
+    @media screen and (max-width: 768px){
+        width: 50%;
+    }
 `
 
 const Images = styled.img`
     display: block;
+    margin: 0!important
 `
 
 const ImagesHover = styled.img`
