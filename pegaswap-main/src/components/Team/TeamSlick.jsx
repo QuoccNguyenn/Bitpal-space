@@ -27,7 +27,9 @@ function TeamSlick(){
         const settings = {
             arrows: true,
             infinite: true,
-            speed: 500,
+            autoplay: true,
+            speed: 800,
+            autoplayspeed: 1000,
             slidesToShow: 1,
             slidesToScroll: 1,
             initialSlide: 0,

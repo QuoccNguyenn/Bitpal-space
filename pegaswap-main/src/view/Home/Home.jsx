@@ -9,6 +9,7 @@ import Header from '../../components/header/header';
 import Introduce from '../../components/introduce/introduce';
 import About from '../../components/about/about';
 import Token from '../../components/Token/Token';
+import Partner from '../../components/Partner/Partner';
 
 
 
@@ -37,6 +38,8 @@ const Home = ({title}) => {
           <OurTeam/>
 
           <Feature/>
+
+          <Partner/>
 
 
         </WrapperHome>
