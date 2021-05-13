@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import HeaderTitle from '../HeaderTiltle/HeaderTitle';
 
 function OurTeam() {
 
@@ -85,19 +86,24 @@ function OurTeam() {
             </BannerTeam>
 
             <OurTeamContainer className='container'>
-                <HeaderContainer className='row'>
-                    <HeaderContent>Our Team</HeaderContent>
-                    <Line/>
-                </HeaderContainer>
+                <HeaderTitle header='Our Team'/>
 
                 <BodyContainer>
                     {state.team.map(item => (
                         <TeamMembers>
                             <TeamInner>
-
-                                <TeamImage>
-                                    <Image src={item.src}/>
-                                </TeamImage>
+                                <ImageHolder>
+                                    <SocialIconContainer>
+                                        <SocialIcon>
+                                            <Icon className='icon-lkd'><a><i className="fa fa-linkedin"></i></a></Icon>
+                                            <Icon className='icon-ytb'><a><i className="fa fa-youtube"></i></a></Icon>
+                                            <Icon className='icon-skp'><a><i className="fa fa-skype"></i></a></Icon>
+                                        </SocialIcon>
+                                    </SocialIconContainer>
+                                    <TeamImage>
+                                        <Image src={item.src}/>
+                                    </TeamImage>
+                                </ImageHolder>    
 
                                 <TeamContent>
 
@@ -115,19 +121,25 @@ function OurTeam() {
                     
                 </BodyContainer>
 
-                <HeaderContainer className='row'>
-                    <HeaderContent>Advisors Board</HeaderContent>
-                    <Line/>
-                </HeaderContainer>
+                <HeaderTitle header='Advisors Board'/>
 
                 <BodyContainer>
                     {state.advistors.map(item => (
-                        <TeamMembers>
+                        <TeamMembers className="advistors">
                             <TeamInner>
 
-                                <TeamImage>
-                                    <Image src={item.src}/>
-                                </TeamImage>
+                                <ImageHolder>
+                                    <SocialIconContainer>
+                                        <SocialIcon>
+                                            <Icon className='icon-lkd'><a><i className="fa fa-linkedin"></i></a></Icon>
+                                            <Icon className='icon-ytb'><a><i className="fa fa-youtube"></i></a></Icon>
+                                            <Icon className='icon-skp'><a><i className="fa fa-skype"></i></a></Icon>
+                                        </SocialIcon>
+                                    </SocialIconContainer>
+                                    <TeamImage>
+                                        <Image src={item.src}/>
+                                    </TeamImage>
+                                </ImageHolder>  
 
                                 <TeamContent>
 
@@ -174,32 +186,22 @@ const BannerLetter = styled.span`
 
 const OurTeamContainer = styled.div``
 
-const HeaderContainer = styled.div``
-
-const HeaderContent = styled.div`
-    width: 100%;
-    color: #fff;
-    font-size: 40px;
-    font-family: sans-serif;
-
-    text-align: center;
-    z-index: 1;
-`
-const Line = styled.div`
-    width: 40px;
-    height: 2px;
-    background: #aceb2f;
-
-    margin: auto;
-    z-index: 1;
-`
-
 const BodyContainer = styled.div`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-
+    justify-content: start;
     margin-top: 10%;
+    
+    @media screen and (min-width: 1500px){
+        .advistors{
+            max-width: 20%;
+        }
+    }
+
+    @media screen and (max-width: 768px){
+        justify-content: center;
+    }
 `
 
 const TeamMembers = styled.div`
@@ -208,13 +210,82 @@ const TeamMembers = styled.div`
 
     padding: 0 2%;
     margin-bottom: 4%;
-    
+
     @media screen and (max-width: 1024px){
         max-width: 33%;
+    }
+
+    @media screen and (max-width: 768px){
+        max-width: 50%;
+    }
+
+    @media screen and (max-width: 415px){
+        max-width: 90%;
     }
 `
 
 const TeamInner = styled.div``
+
+const ImageHolder = styled.div`
+    position: relative;
+`
+
+const SocialIconContainer = styled.div`
+    width: 100%;
+    height: 100%;
+    border-radius: 10rem;
+    background: rgba(0,0,0,0);
+
+    position: absolute;
+    top: 0;
+
+    .icon-lkd{
+        opacity: 0;
+    }
+    .icon-ytb{
+        opacity: 0;
+    }
+    .icon-skp{
+        opacity: 0;
+    }
+
+    :hover{
+        background: rgba(0,0,0,0.4);
+
+        .icon-lkd{
+            opacity: 1;
+            transition: 0.2s all;
+        }
+        .icon-ytb{
+            opacity: 1;
+            transition: 1.2s all;
+        }
+        .icon-skp{
+            opacity: 1;
+            transition: 2.2s all;
+        }
+    }
+`
+
+const SocialIcon = styled.div`
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #fff;
+`
+
+const Icon = styled.span`
+    width: 20%;
+    text-align: center;
+
+    :hover{
+        color:  #aceb2f;
+    }
+`
 
 const TeamImage = styled.div``
 

@@ -29,7 +29,20 @@ function TeamSlick(){
             infinite: true,
             speed: 500,
             slidesToShow: 1,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            initialSlide: 0,
+            customPaging: i => (
+                <span className="dot"></span>
+            ),
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings:{
+                        dots: true,
+                        arrows: false
+                    }
+                }
+            ]
         };
         return (
             <div>
@@ -78,6 +91,10 @@ const TeamQuote = styled.p`
     font-family: sans-serif;
     font-style: italic;
     font-weight: 300;
+
+    @media screen and (max-width: 415px){
+        font-size: 17px;
+    }
 `
 const TeamName = styled.div`
     text-align: center;

@@ -13,6 +13,11 @@ function Parallaxie (props) {
 const Image = styled.img`
     z-index: -1;
     max-width: 125%;
+
+    @media screen and (max-width: 768px){
+        max-width: 270%;
+        margin-left: -70%;
+    }
 `
 
 export default Parallaxie;
