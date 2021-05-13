@@ -99,7 +99,7 @@ function Feature() {
 
 const FeatureSection = styled.section`
     position: relative;
-    padding: 10% 15px 0;
+    padding: 10% 15px 3%;
 `
 
 const BannerTeam = styled.div`
