@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import {  Modal,  ModalBody } from 'reactstrap';
 import Iframe from 'react-iframe'
@@ -7,6 +7,7 @@ import Iframe from 'react-iframe'
 const About = () =>{
     const [modal, setModal] = useState(false);
       const toggle = () => setModal(!modal);
+
 
 return(
     <Box_ab>
