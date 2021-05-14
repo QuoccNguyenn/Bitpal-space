@@ -174,6 +174,7 @@ const BannerTeam = styled.div`
 `
 
 const BannerLetter = styled.span`
+    color: #ffffff05;
     font-size: 50px;
     z-index: -1;
 

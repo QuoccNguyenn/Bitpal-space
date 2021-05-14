@@ -9,6 +9,10 @@ import Header from '../../components/header/header';
 import Introduce from '../../components/introduce/introduce';
 import About from '../../components/about/about';
 import Token from '../../components/Token/Token';
+import Partner from '../../components/Partner/Partner';
+import News from '../../components/News/News';
+import Footer from '../../components/Footer/Footer';
+import Quality from '../../components/Quality/Quality';
 
 
 
@@ -25,12 +29,22 @@ const Home = ({title}) => {
             <Token></Token> 
 
           {/* A. nguyen */}
+
+          <Quality/>
+
+          {/* Cho nay cua Roadmap */}
+
           <Team/>
 
           <OurTeam/>
 
           <Feature/>
 
+          <Partner/>
+
+          <News/>
+
+          <Footer/>
 
         </WrapperHome>
 
