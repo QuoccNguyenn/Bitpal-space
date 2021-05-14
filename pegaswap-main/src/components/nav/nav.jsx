@@ -1,7 +1,95 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
+import Child_menu from './components/child_menu/child_menu';
+
+ const arrHome = ["MAIN HOME","APP PRESENTATION","CRYPTO ADVISOR","CRYPTO AGENCY","ICO HOME","BLOCKCHAIN APP","VERTICAL SLIDER","BLOG HOME","LANDING"];
+ const arrPages = ["ABOUT US","TEAM MEMBER","CONTACT US","GET IN TOUCH","404 ERROR PAGE"];
+ const arrCurentcies = ["ICO COUNTDOWN","ICO SINGLE"];
+ const arrportfolio = [
+     {
+         name:" STANDARD",
+         Subchild:0
+     },
+     {
+        name:"GALLEYRY",
+        Subchild:0
+    },{
+        name:"MASONRY",
+        Subchild:0
+    },{
+        name:"LAYOUTS",
+        Subchild:1,
+        sub:["TWO COLUMNS","THRE COLUMNS","FOUR COLUMNS","FOUR COLUMNS WIDE","FIVE COLUMNS WIDE"]
+    },{
+        name:"SINGLE",
+        Subchild:1,
+        sub:["BIG SLIDER","BIG IMAGES","GALLERY"]
+    }
+ ];
+ const arrblog = [
+    {
+        name:" RIGHT SIDEBAR",
+        Subchild:0
+    },
+    {
+       name:"LEFT SIDEBAR",
+       Subchild:0
+   },{
+       name:"THREE COLUMNS",
+       Subchild:0
+   },{
+       name:"POST TYPES",
+       Subchild:1,
+       sub:["STANDARD","GALLERY","LINK","QUETE","VIDEO","AUDIO"]
+   }
+];
+const arrshop = [
+    {
+        name:" PRODUCT LIST",
+        Subchild:0
+    },
+    {
+       name:"PRODUCT SINGLE",
+       Subchild:0
+   },{
+       name:"SHOP LAYOUTS",
+       Subchild:1,
+       sub:["THREE COLUMNS","FOUR COLUMNS","FULL WIDTH"]
+   },{
+       name:"SHOP PAGES",
+       Subchild:1,
+       sub:["MY ACCOUNT","CART","CHECKOUT"]
+   }
+]
+
+const arrE =[
+    {
+        title:"FEATURED",
+        arr:["ROADMAP","ICO LIST","CURRENCY LIST & CONVERTER","ICO COUNTDOWN STANDARD","ICO COUNTDOWN BOXED","ICO SHOWCASE","PIE CHART DOUGHNUT","CURRENCY CAROUSEL","FRANE SLIDER"]
+    },
+    {
+        title:"CLASSIC",
+        arr:["ACCORDIONS","TABS","BUTTONS","ICON WITH TEXT","ICON LIST ITEM" ,"CONTACT FORM","GOOGLE MAPS","VIDEO BUTTON","PARALLAX SECTION"]
+    },
+    {
+        title:"INFORGRAPPHIC",
+        arr:["TESTIMONIALS","TEAM","CLIENTS","PROGRESS BAR","PRICING TABLE","COUNTERS","COUNDTDOWN","PIE CHART","BLOG LIST","SHOP LIST"]
+    },
+    {
+        title:"TYPOGRAPHY",
+        arr:["HEADING","ROW BACKGROUND TEXT","COLUMNS","BLOCKQUOTE","DROPCAPS","HIGHLIGHTS","SEPARATORS"]
+    }
+]
 
 const NavBar=()=>{
+    const[child_home,Setchild_home]= useState(arrHome);
+    const[child_pages,Setchild_pages]= useState(arrPages);
+    const[child_Curent,Setchild_Curent]= useState(arrCurentcies);
+    const[child_pf,Setchild_pf]= useState(arrportfolio);
+    const[child_blog,Setchild_blog]= useState(arrblog);
+    const[child_shop,Setchild_shop]= useState(arrshop);
+    const[child_E,Setchild_E]= useState(arrE);
+
    return(
         <Box_nav>
             <Nav className="container">
@@ -12,13 +100,83 @@ const NavBar=()=>{
                     <Contents_nav>
 
                         <ul>
-                            <li className="active"><a href="">HOME</a></li>
-                            <li><a href="">PAGES</a></li>
-                            <li><a href="">CURRENCIES</a></li>
-                            <li><a href="">PORTFOLIO</a></li>
-                            <li><a href="">BLOG</a></li>
-                            <li><a href="">SHOP</a></li>
-                            <li><a href="">ELEMENTS</a></li>
+                            <li className="active"><a href="">HOME</a>
+                                <Child_menu child_arr ={child_home}></Child_menu>
+                            </li>
+                            <li ><a href="">PAGES</a>
+                                <Child_menu child_arr ={child_pages}></Child_menu>
+                            </li>
+                            <li ><a href="">CURRENCIES</a>
+                            <Child_menu child_arr ={child_Curent}></Child_menu>
+                            </li>
+                            <li><a href="">PORTFOLIO</a>
+                                <Child className="child">
+                                    {child_pf.filter(chl=>chl.Subchild==0).map((chl,idx)=>(
+                                        <li key={idx} className=""><a href="" className="a_child">{chl.name}</a></li>
+                                    ))}
+                                    {child_pf.filter(chl=>chl.Subchild==1).map((chl,idx)=>(
+                                        <li key={idx} className=""><a href="" className="a_child">{chl.name}</a> <i class="fas fa-arrow-right"></i>
+                                            <Submenu className="sub left">
+                                                {chl.sub.map((sub,idx)=>(
+                                                    <li key={idx}><a href="" className="a_sub">{sub}</a></li>
+                                                ))}
+                                            </Submenu>
+                                        </li>
+                                    ))}
+                                </Child></li>
+
+                            <li><a href="">BLOG</a>
+                                <Child className="child">
+                                        {child_blog.filter(chl=>chl.Subchild==0).map((chl,idx)=>(
+                                            <li key={idx} className=""><a href="" className="a_child">{chl.name}</a></li>
+                                        ))}
+                                        {child_blog.filter(chl=>chl.Subchild==1).map((chl,idx)=>(
+                                            <li key={idx} className=""><a href="" className="a_child">{chl.name}</a> <i class="fas fa-arrow-right"></i>
+                                                <Submenu className="sub left">
+                                                    {chl.sub.map((sub,idx)=>(
+                                                        <li key={idx}><a href="" className="a_sub">{sub}</a></li>
+                                                    ))}
+                                                </Submenu>
+                                            </li>
+                                        ))}
+                                    </Child>
+                            </li>
+                            <li><a href="">SHOP</a>
+                                    <Child className="child right">
+                                                {child_blog.filter(chl=>chl.Subchild==0).map((chl,idx)=>(
+                                            <li key={idx} className=""><a href="" className="a_child">{chl.name}</a></li>
+                                        ))}
+                                        {child_blog.filter(chl=>chl.Subchild==1).map((chl,idx)=>(
+                                            <li key={idx} className=""><a href="" className="a_child">{chl.name}</a> <i class="fas fa-arrow-right"></i>
+                                                <Submenu className="sub right">
+                                                    {chl.sub.map((sub,idx)=>(
+                                                        <li key={idx}><a href="" className="a_sub">{sub}</a></li>
+                                                    ))}
+                                                </Submenu>
+                                            </li>
+                                        ))}
+                                    </Child>
+                                </li>
+                            <li className="hv_e"><a href="">ELEMENTS</a>
+                                <Nav_e className="child_e">
+                                    <div className="container">
+                                        <div className="box_e">
+                                           
+                                            {child_E.map((chl,idx)=>(
+                                                <div key={idx} className="item">
+                                                    <li className="title" ><a href="">{chl.title}</a></li>
+                                                    {chl.arr.map((chl,idx)=>(
+                                                        <li className="text" clas><a href="">{chl}</a></li>
+                                                    ))}
+                                                </div>
+
+                                                
+                                            ))}
+                                            
+                                        </div>
+                                    </div>
+                                </Nav_e>
+                            </li>
                         </ul>
 
                         <Btn_menu>
@@ -35,7 +193,11 @@ const NavBar=()=>{
 
 const Box_nav= styled.nav`
     padding:0;
-    
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    z-index:9999999;
 `
 
 const Nav = styled.div`
@@ -79,16 +241,48 @@ const Contents_nav = styled.div`
     flex-wrap: wrap;   
     }
 
+    .hv_e:hover .child_e{
+        display:block;
+    }
+   
+
+    li{
+        cursor: pointer;
+        :hover {
+            a{
+                color:#aceb2f;
+            }
+
+            .child{
+                display: block !important;
+            }
+
+        }
+        position:relative;
+    }
+    
+
     li a{
         color:white;
         text-decoration:none;
         font-weight:bold;
         font-family: 'Roboto', sans-serif;
         letter-spacing: 2px;
+        transition:all .5s;
     }
 
-    li.active a{
-        color:#aceb2f;
+    li.active{
+        a{
+            color:#aceb2f;
+        }
+
+        .child{
+            a{
+                color:#989898;
+                display:inline-block;
+            }
+        }
+
     }
 
    
@@ -105,5 +299,287 @@ const Btn_menu = styled.div`
     }
 `
 
+
+const Child = styled.ul`
+    position: absolute;
+    background: #151515;
+    border: 1px #303030;
+    border-top: 2px solid #aceb2f;
+    border-radius: 3px;
+    box-sizing: border-box;
+    padding: 0;
+    text-aglin: left;
+    top: 100%;
+    width: 235px;
+    padding: 20px 0 0 20px  !important;
+    height:auto !important;
+    display:none !important;
+
+    &.right{
+        padding: 0 20px 0 0   !important;
+
+        li{
+            text-align: right;
+            padding: 0 20px 0 0;
+
+            :hover{
+
+                ::before{
+                    left:85%;
+                }
+           
+                a.a_child{
+                    transform: translateX(-30px);
+                }
+
+                i{
+                    right: 90%;
+                }
+            }
+
+            @keyframes run_left{
+                from{
+                    transform: translateX(20px);
+                }
+            }
+            i{
+                right: 80%;
+                transform: translateY(-50%)rotate(180deg);
+            }
+    }
+        }
+
+        
+    }
+
+    li{
+        cursor: pointer;
+        position: relative;
+        font-size: 14px;
+        line-height: 40px;
+        position:relative;
+
+        i{
+            position: absolute;
+            right: 25px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: all .5s;
+        }
+
+        ::before{
+            content: "";
+            width: 7px;
+            height: 7px;
+            background: #aceb2f;
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 50%;
+            animation: run_left .5s;
+            display:none;
+        }
+
+        @keyframes run_left{
+            from{
+                transform: translateX(-20px);
+            }
+        }
+
+        a.a_child{
+            color:#989898;
+            display:inline-block;
+        }
+        
+        &.active::before{
+                display:block;
+        }
+
+        &.active a.a_child{
+            transform: translateX(40px);
+            color:white;
+        }
+    
+
+        :hover{
+           
+            ::before{
+                display:block;
+            }
+                a.a_child{
+                    transform: translateX(40px);
+                    color:white;
+                }
+
+                i{
+                    right: 0;
+                    color:white;
+                }
+                .sub{
+                    display: block !important;
+                }
+            }
+    }
+     
+`
+
+const Submenu = styled.ul`
+    position: absolute;
+    background: #151515;
+    border: 1px #303030;
+    border-top: 2px solid #aceb2f;
+    border-radius: 3px;
+    box-sizing: border-box;
+    padding: 0;
+    text-aglin: left;
+    top: 0;
+    left:-109%;
+    width: 235px;
+    padding: 20px 0 0 20px  !important;
+    height:auto !important;
+    display:none !important;
+
+    &.right{
+        li{
+            :hover{
+               
+                   
+                    a.a_sub{
+                        transform: translateX(-40px);
+                        color:white;
+                    }
+        
+                    i{
+                        right: 100%;
+                        color:white;
+                    }
+                    
+                }
+        }
+        }
+    }
+
+    li{
+        a.a_sub{
+            color:#989898!important;
+            display:inline-block;
+        }
+    
+    
+        :hover{
+               
+            ::before{
+                display:block;
+            }
+               
+                a.a_sub{
+                    transform: translateX(40px);
+                    color:white;
+                }
+    
+                i{
+                    right: 0;
+                    color:white;
+                }
+                .sub{
+                    display: block !important;
+                }
+            }
+    }
+    }
+`
+
+const Nav_e = styled.div`
+
+    position: absolute;
+    background: #151515;
+    border: 1px #303030;
+    border-top: 2px solid #aceb2f;
+    border-radius: 3px;
+    box-sizing: border-box;
+    padding: 0;
+    top: 100%;
+    right:-390%;
+    width: 100vw;
+    display:none;
+
+    .box_e{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+
+        padding:1.5rem 0;
+
+        .item {
+            width: 100%;
+            position: relative;
+            padding-left: 20px;
+
+            ::before{
+                content: "";
+                width: 1px;
+                background: white;
+                position: absolute;
+                top: 0%;
+                left: 0;
+                bottom: 0%;
+            }
+             li {
+                font-size: 14px;
+                line-height: 40px;
+
+                a{
+                    color:#989898;
+                    display:inline-block;
+                }
+            }
+
+                li.title {
+                    line-height: 20px;
+                    font-size: 18px;
+                    padding-bottom: 20px;
+
+                    a{
+                        color:#fff;
+                    }
+            }
+
+            li.text{
+                cursor: pointer;
+                position: relative;
+                font-size: 14px;
+                line-height: 40px;
+                position:relative;
+
+                ::before{
+                    content: "";
+                    width: 7px;
+                    height: 7px;
+                    background: #aceb2f;
+                    position: absolute;
+                    left: 15px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    border-radius: 50%;
+                    animation: run_left .5s;
+                    display:none;
+                }
+
+                :hover{
+           
+                    ::before{
+                        display:block;
+                    }
+                        a{
+                            transform: translateX(40px);
+                            color:white;
+                        }
+                    }
+            }
+            }
+        }
+    }
+`
 
 export default NavBar

@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import NavBar from './components/nav/nav';
 import Home from './view/Home/Home';
+import Marquee from "react-fast-marquee";
 
 const App = () => {
 
@@ -13,7 +14,9 @@ const App = () => {
             <div className="item-line"></div>
             <div className="item-line"></div>
         </Boxline>
-
+          <Marquee>
+            I can be a React component, multiple React components, or just some text.
+        </Marquee>
           <NavBar></NavBar>
           <Home></Home>
     </Box_app>
@@ -32,6 +35,11 @@ const Box_app = styled.div`
     }
   }
   
+
+  ::selection {
+    background: #aceb2f;
+    color: #fff;
+}
 `
 const  Boxline = styled.div`
     position:absolute;

@@ -138,7 +138,8 @@ const Box_right = styled.div`
     background:#232323;
     margin:0 auto;
     padding:45px 40px;
-
+    border-radius: 10px;
+    
     .title_box{
         color:#aceb2f;
         font-size: 24px;
