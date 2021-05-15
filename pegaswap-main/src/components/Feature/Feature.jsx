@@ -8,29 +8,35 @@ function Feature() {
         contentLeft:[
             {
                 src:'../../images/h1-custom-icon-img-15.png',
-                title: 'Predictions'
+                title: 'Predictions',
+                delay:'0.1s'
             },
             {
                 src:'../../images/h1-custom-icon-img-16.png',
-                title: 'Innovation'
+                title: 'Innovation',
+                delay:'0.2s'
             },
             {
                 src:'../../images/h1-custom-icon-img-16.png',
-                title: 'Network'
+                title: 'Network',
+                delay:'0.3s'
             }
         ],
         contentRight:[
             {
                 src:'../../images/h1-custom-icon-img-18.png',
-                title: 'Trafficking'
+                title: 'Trafficking',
+                delay:'0.1s'
             },
             {
                 src:'../../images/h1-custom-icon-img-19.png',
-                title: 'Sercurity'
+                title: 'Sercurity',
+                delay:'0.2s'
             },
             {
                 src:'../../images/h1-custom-icon-img-20.png',
-                title: 'Sell and buy'
+                title: 'Sell and buy',
+                delay:'0.3s'
             }
         ]
     }
@@ -56,13 +62,13 @@ function Feature() {
                         <ContentHolderLeft>
                             <ContentLeft>
                                 {state.contentLeft.map(item => (
-                                    <SubContent>
-                                    <Image src={item.src}/>
-                                    <Title>{item.title}</Title>
-                                    <Content>
-                                        Donec quam felis, ultricies nec, pellentesque eu pret ium quis, sem. Nulla consequat massa quis justo fri
-                                    </Content>
-                                </SubContent>
+                                    <SubContent className="wow fadeInLeft" data-wow-delay={item.delay}>
+                                        <Image src={item.src}/>
+                                        <Title>{item.title}</Title>
+                                        <Content>
+                                            Donec quam felis, ultricies nec, pellentesque eu pret ium quis, sem. Nulla consequat massa quis justo fri
+                                        </Content>
+                                    </SubContent>
                                 ))}
                                 
                             </ContentLeft>
@@ -76,13 +82,13 @@ function Feature() {
                         <ContentHolderRight>
                             <ContentRight>
                                 {state.contentRight.map(item => (
-                                    <SubContentRight>
-                                    <Image src={item.src}/>
-                                    <Title>{item.title}</Title>
-                                    <InnerContentRight>
-                                        Donec quam felis, ultricies nec, pellentesque eu pret ium quis, sem. Nulla consequat massa quis justo fri
-                                    </InnerContentRight>
-                                </SubContentRight>
+                                    <SubContentRight className="wow fadeInRight" data-wow-delay={item.delay}>
+                                        <Image src={item.src}/>
+                                        <Title>{item.title}</Title>
+                                        <InnerContentRight>
+                                            Donec quam felis, ultricies nec, pellentesque eu pret ium quis, sem. Nulla consequat massa quis justo fri
+                                        </InnerContentRight>
+                                    </SubContentRight>
                                 ))}
                                 
                             </ContentRight>

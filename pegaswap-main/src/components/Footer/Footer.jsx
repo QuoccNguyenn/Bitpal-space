@@ -120,6 +120,10 @@ const SocialUl = styled.ul`
     justify-content: space-between;
     padding: 0 15% 0 0;
 
+    li:hover{
+        color: #aceb2f;
+    }
+
     @media screen and (max-width: 415px){
         padding: 0 40% 0 0;
     }
@@ -169,6 +173,11 @@ const InputForm = styled.div`
         position: absolute;
         top: 33%;
         right: 20px;
+    }
+
+    i:hover{
+        right: 17px;
+        transition: 0.2s all ease-in-out;
     }
 `
 

@@ -140,8 +140,8 @@ const ReadMore = styled.div`
 
     :hover{
         i{
-            margin-left: 7px;
-            transition: 0.4s all ease-in-out;
+            margin-left: 9px;
+            transition: 0.2s all ease-in-out;
         }
     }
 `

@@ -195,14 +195,14 @@ const Contents_nav = styled.div`
     flex-direction:row;
 
     ul{
-    height: 100%;
-    flex-grow:4;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;   
+        height: 100%;
+        flex-grow:4;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;   
     }
 
     .hv_e:hover .child_e{

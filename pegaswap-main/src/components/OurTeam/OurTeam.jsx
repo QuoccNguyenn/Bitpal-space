@@ -96,7 +96,7 @@ function OurTeam() {
                                     <SocialIconContainer>
                                         <SocialIcon>
                                             <Icon className='icon-lkd'><a><i className="fa fa-linkedin"></i></a></Icon>
-                                            <Icon className='icon-ytb'><a><i className="fa fa-youtube"></i></a></Icon>
+                                            <Icon className='icon-ytb'><a><i className="fab fa-youtube"></i></a></Icon>
                                             <Icon className='icon-skp'><a><i className="fa fa-skype"></i></a></Icon>
                                         </SocialIcon>
                                     </SocialIconContainer>
@@ -132,7 +132,7 @@ function OurTeam() {
                                     <SocialIconContainer>
                                         <SocialIcon>
                                             <Icon className='icon-lkd'><a><i className="fa fa-linkedin"></i></a></Icon>
-                                            <Icon className='icon-ytb'><a><i className="fa fa-youtube"></i></a></Icon>
+                                            <Icon className='icon-ytb'><a><i className="fab fa-youtube"></i></a></Icon>
                                             <Icon className='icon-skp'><a><i className="fa fa-skype"></i></a></Icon>
                                         </SocialIcon>
                                     </SocialIconContainer>

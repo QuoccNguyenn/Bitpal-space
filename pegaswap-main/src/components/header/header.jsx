@@ -219,7 +219,7 @@ const Box_right = styled.div`
     }
 
     .item_time{
-        width: 25%;
+        width: 20%;
         margin: 0 7px;
 
         @media screen and (max-width: 768px){

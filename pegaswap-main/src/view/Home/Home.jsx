@@ -15,6 +15,7 @@ import Footer from '../../components/Footer/Footer';
 import Quality from '../../components/Quality/Quality';
 import Roadmap from '../../components/Roadmap/Roadmap';
 import Video from '../../components/video2/video';
+import ScrollButton from '../../components/ButtonScroll/ScrollButton';
 
 
 
@@ -50,6 +51,8 @@ const Home = ({title}) => {
           <News/>
 
           <Footer/>
+
+          <ScrollButton/>
 
         </WrapperHome>
 

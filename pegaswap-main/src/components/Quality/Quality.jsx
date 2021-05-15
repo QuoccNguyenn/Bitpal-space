@@ -10,17 +10,20 @@ function Quality() {
             {
                 src:'../../images/h1-custom-icon-img-12.png',
                 percent:'75%',
-                ability:'Sercurity'
+                ability:'Sercurity',
+                delay: '0.1s'
             },
             {
                 src:'../../images/h1-custom-icon-img-13.png',
                 percent:'150%',
-                ability:'Transparency'
+                ability:'Transparency',
+                delay: '0.3s'
             },
             {
                 src:'../../images/h1-custom-icon-img-14.png',
                 percent:'220%',
-                ability:'Professional'
+                ability:'Professional',
+                delay: '0.5s'
             }
         ]
     }
@@ -52,7 +55,7 @@ function Quality() {
                         <ContentHolder>
                             <ContentFlex>
                                 {state.item.map(item => (
-                                    <ContentItem>
+                                    <ContentItem className="wow fadeInUp" data-wow-delay={item.delay} duration="0.2s">
                                         <Image src={item.src}/>
                                         <Percent>{item.percent}</Percent>
                                         <Ability>{item.ability}</Ability>
@@ -138,7 +141,7 @@ const ContentHolder = styled.div`
 `
 
 const Content = styled.div`
-    padding: 0 5%;
+    padding: 0 5% 0 15%;
     
     @media screen and (max-width: 1024px){
         padding-bottom: 15%;
@@ -165,7 +168,7 @@ const Paragraph = styled.div`
     color: #fff;
     font-weight: 100;
     font-family: sans-serif;
-    padding: 8% 20px 8% 0;
+    padding: 3% 20px 8% 0;
 
     @media screen and (max-width: 1024px){
         padding: 3% 0 8% 0;
@@ -228,7 +231,7 @@ const ButtonOutter = styled.a`
     border-radius: 50px;
     margin: 1rem 0;
 
-    font-weight: 900;
+    font-weight: 900 !important;
     padding: 15px 25px;
     text-transform: uppercase;
     font: normal 14px/16px 'proxima-nova', sans-serif;
@@ -249,7 +252,8 @@ const ButtonOutter = styled.a`
         background-color: #fff;
     }
     @media screen and (max-width: 415px){
-        margin: 1rem auto
+        margin: 1rem auto;
+        width: 70%;
     }
   
 `
