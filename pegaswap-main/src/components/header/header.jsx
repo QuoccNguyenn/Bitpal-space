@@ -1,10 +1,20 @@
 import react from 'react'
 import styled from 'styled-components'
 import { Progress } from 'reactstrap';
+import Button from '../Buttons/Button';
 
 const Header=() =>{
     return(
         <Box_hd>
+
+            <BannerTeam>
+                <BannerLetter>c</BannerLetter>
+                <BannerLetter>r</BannerLetter>
+                <BannerLetter>y</BannerLetter>
+                <BannerLetter>p</BannerLetter>
+                <BannerLetter>t</BannerLetter>
+                <BannerLetter>o</BannerLetter>
+            </BannerTeam>
             <Content_hd>
                 <div className="container">
                     <div className="row">
@@ -14,11 +24,13 @@ const Header=() =>{
                                 <p>Regarded as a synonym to cryptocurrency, blockchain is much more than a payment option.</p>  
                                 <div className="box_btn">
                                     <div className="btn">
-                                        <a href="">FIND OUT MORE</a>
-                                    </div>    
+                                        <Button name='WHITE PAPER'/>
+                                    </div>
+                                    
+                                    
 
                                     <div className="btn">
-                                        <a href="">WHITE PAPER</a>
+                                        <Button name='FIND OUT MORE'/>
                                     </div>
                                 </div>  
                             </Left_content>    
@@ -50,8 +62,9 @@ const Header=() =>{
                                         </div>
                                     </div>
                                     <div className="btn">
-                                        <a href="">Buy Edge Tokens</a>
+                                        <Button  name='Buy Edge Tokens'/>
                                     </div>
+
 
                                     <div className="box_pro">
                                         <div className="text_pro">
@@ -83,6 +96,23 @@ const Box_hd = styled.section`
     position:relative;
 `
 
+const BannerTeam = styled.div`
+    position: absolute;
+    top: 17%;
+    left: 5%;
+`
+
+const BannerLetter = styled.span`
+    color: #ffffff05;
+    font-size: 50px;
+    z-index: -1;
+
+    font-size: 250px;
+    font-weight: 900;
+    font-family: sans-serif;
+    letter-spacing: 10px;
+    line-height: normal;
+`
 const Content_hd = styled.div`  
     padding:10.5rem 0;
 `
@@ -112,23 +142,6 @@ const Left_content = styled.div`
         line-height: 35px;
         margin: 19px 0 40px 0;
         font-family: 'Montserrat', sans-serif;
-    }
-
-    .box_btn{
-        .btn{
-
-            a{
-                display:block;
-                text-decoration:none;
-                color:white;
-                font-family: 'Montserrat', sans-serif;
-                font-weight:600;
-                padding:15px 25px;
-                border-radius:50px;
-                border:2px solid #aceb2f;
-                font-size:14px;
-            }
-        }
     }
 `
 
@@ -190,18 +203,6 @@ const Box_right = styled.div`
 
     .btn{
         width:100%;
-        
-
-        a{
-            display:block;
-            text-decoration:none;
-            color:white;
-            font-family: 'Montserrat', sans-serif;
-            font-weight:600;
-            padding:15px 0;
-            border-radius:50px;
-            border:2px solid #aceb2f;
-        }
     }
     .box_pro{
         margin:40px 0;

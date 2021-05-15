@@ -42,7 +42,10 @@ function Quality() {
                                     Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. 
                                     Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero
                                 </Paragraph>
-                                <Button>WHITE PAPER</Button>
+                                <ButtonOutter>
+                                    WHITE PAPER
+                                    <ButtonBg></ButtonBg>
+                                </ButtonOutter>
                             </Content>
                         </ContentHolder>
 
@@ -178,20 +181,6 @@ const Paragraph = styled.div`
     }
 `
 
-const Button = styled.div`
-    border: 1.3px solid #fff;
-    font-family: sans-serif;
-    font-size: 15px;
-    color: #fff;
-    width: fit-content;
-    padding: 10px 17px;
-    border-radius: 20px;
-
-    @media screen and (max-width: 415px){
-        margin: auto
-    }
-`
-
 const ContentFlex = styled.div`
     display: flex;
     flex-direction: row;
@@ -227,6 +216,54 @@ const Ability = styled.div`
     font-weight: 500;
     color: #fff;
 `
+const ButtonOutter = styled.a`
 
+    color: #fff !important;
+    position: relative;
+    display: block;
+    overflow: hidden;
+
+    width: 30%;
+    height: auto;
+    border-radius: 50px;
+    margin: 1rem 0;
+
+    font-weight: 900;
+    padding: 15px 25px;
+    text-transform: uppercase;
+    font: normal 14px/16px 'proxima-nova', sans-serif;
+
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #fff; 
+    z-index: 1;
+
+    :hover {
+        color: #000 !important;
+    }
+    :hover span {
+        width: 225%;
+        height: 562.5px;
+    }
+    :active {
+        background-color: #fff;
+    }
+    @media screen and (max-width: 415px){
+        margin: 1rem auto
+    }
+  
+`
+
+const ButtonBg = styled.span`
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-radius: 80%;
+    background-color: #fff;
+    transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+`
 
 export default Quality;

@@ -41,6 +41,21 @@ const TeamSection = styled.section`
         background: #fff;
     }
 
+    .slick-prev {
+        left: -40px;
+    }
+
+    .slick-prev:before, .slick-next:before {
+        font-family: system-ui;
+        font-size: 37px;
+        color: #fff;
+        opacity: 1;
+    }
+
+    .slick-prev:hover:before, .slick-next:hover:before{
+        color: #aceb2f;
+    }
+
     @media screen and (max-width: 768px){
         max-height: 500px;
     }

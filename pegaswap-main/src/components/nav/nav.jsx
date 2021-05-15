@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import Button from '../Buttons/Button';
 import Child_menu from './components/child_menu/child_menu';
 
  const arrHome = ["MAIN HOME","APP PRESENTATION","CRYPTO ADVISOR","CRYPTO AGENCY","ICO HOME","BLOCKCHAIN APP","VERTICAL SLIDER","BLOG HOME","LANDING"];
@@ -138,8 +139,8 @@ const NavBar=()=>{
                         </ul>
 
                         <Btn_menu>
-                            <div className="btn">
-                                Login
+                            <div style={{width: '55%'}}>
+                                <Button name='LOGIN'/>
                             </div>
                         </Btn_menu>
                     </Contents_nav>
@@ -255,10 +256,6 @@ const Btn_menu = styled.div`
     flex-grow:2;
     .btn{
         width:70%;
-        padding:13px 0;
-        border:2px solid #aceb2f;
-        border-radius: 50px;
-        color:white;
     }
 `
 

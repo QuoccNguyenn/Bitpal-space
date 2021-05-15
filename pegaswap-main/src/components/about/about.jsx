@@ -11,6 +11,13 @@ const About = () =>{
 
 return(
     <Box_ab>
+        <BannerTeam>
+            <BannerLetter>a</BannerLetter>
+            <BannerLetter>b</BannerLetter>
+            <BannerLetter>o</BannerLetter>
+            <BannerLetter>u</BannerLetter>
+            <BannerLetter>t</BannerLetter>
+        </BannerTeam>
         <div className="container">
             <div className="row">
                 <Ab_left className="col-xl-5">
@@ -67,8 +74,26 @@ const Box_ab = styled.section`
     width:100%;
     overflow:hidden;
     padding:7.5rem 0;
+
+    position: relative;
+`
+const BannerTeam = styled.div`
+    position: absolute;
+    top: 0;
+    left: 5%;
 `
 
+const BannerLetter = styled.span`
+    color: #ffffff05;
+    font-size: 50px;
+    z-index: -1;
+
+    font-size: 250px;
+    font-weight: 900;
+    font-family: sans-serif;
+    letter-spacing: 10px;
+    line-height: normal;
+`
 const Ab_left = styled.div`
     width:100%;
 
