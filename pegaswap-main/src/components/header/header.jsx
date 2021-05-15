@@ -115,6 +115,10 @@ const BannerLetter = styled.span`
 `
 const Content_hd = styled.div`  
     padding:10.5rem 0;
+    @media screen and (max-width: 415px){
+        padding:5.5rem 0;
+        
+    }
 `
 
 const Left_content = styled.div`
@@ -125,6 +129,12 @@ const Left_content = styled.div`
         margin: 0 auto;
     }
 
+    @media screen and (max-width:415px){
+        padding: 1.5rem 0;
+    }
+
+
+
     .text_content{
         max-width:100%;
         font-size:75px;
@@ -133,6 +143,14 @@ const Left_content = styled.div`
         letter-spacing:3px;
         color:white;
         padding:15px 0;
+        
+        @media screen and (max-width:768px){
+            font-size: 55px;
+        }
+
+        @media screen and (max-width:415px){
+            font-size: 35px;
+        }
     }
     p{
         max-width:100%;
@@ -142,9 +160,17 @@ const Left_content = styled.div`
         line-height: 35px;
         margin: 19px 0 40px 0;
         font-family: 'Montserrat', sans-serif;
+
+        @media screen and (max-width:768px){
+            font-size: 18px;
+        }
+
+        @media screen and (max-width:415px){
+            font-size: 12px;
+            margin: 10px 0;
+        }
     }
 `
-
 const Right_content = styled.div`
     width:100%;
     padding: 2.5rem 0;
@@ -152,6 +178,10 @@ const Right_content = styled.div`
     @media screen and (max-width: 1024px){
         width: 80%;
         margin: 0 auto;
+    }
+
+    @media screen and (max-width:768px){
+        width:100%;
     }
 `
 
@@ -169,6 +199,11 @@ const Box_right = styled.div`
         font-family: 'Montserrat', sans-serif;
         font-weight:600;
         margin-bottom:40px;
+
+        @media screen and (max-width:415px){
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
     }
 
     .box_time{
@@ -176,11 +211,23 @@ const Box_right = styled.div`
         display: flex;
         flex-direction: row;
         margin-bottom:40px;
+        flex-wrap: wrap;
+        justify-content: center;
+        @media screen and (max-width:415px){
+            margin-bottom: 20px;
+        }
     }
 
     .item_time{
         width: 25%;
         margin: 0 7px;
+
+        @media screen and (max-width: 768px){
+            width:40%;
+            
+        }
+
+        
        
     }
 
@@ -192,6 +239,10 @@ const Box_right = styled.div`
         font-family: 'Montserrat', sans-serif;
         border-radius: 10px;
         background: white;
+
+        @media screen and (max-width: 415px){
+            font-size: 25px;
+        }
     }
     .text_time{
         width:100%;
@@ -199,10 +250,15 @@ const Box_right = styled.div`
         margin-top:7px;
         color:white;
         font-family: 'Roboto', sans-serif;
+
+        @media screen and (max-width: 415px){
+            font-size: 14px;
+        }
     }
 
     .btn{
         width:100%;
+        }
     }
     .box_pro{
         margin:40px 0;
@@ -221,6 +277,14 @@ const Box_right = styled.div`
                 &.tr{
                     text-align:right;
                 }
+
+                @media screen and (max-width:600px){
+                    font-size: 12px;
+                }
+
+                @media screen and (max-width:415px){
+                    font-size: 10px;
+                }
             }
         }
         .clear{
@@ -232,6 +296,10 @@ const Box_right = styled.div`
             background:black;
             height:13px;
             border-radius:20px;
+            
+            @media screen and (max-width:600px){
+                height: 7px;
+            }
 
             .progress-bar{
                 background-color:#aceb2f;

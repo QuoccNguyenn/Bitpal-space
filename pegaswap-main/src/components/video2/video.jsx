@@ -59,6 +59,10 @@ const Content_tk = styled.div`
     flex-direction: row;
     align-items: center;
     padding: 0;
+
+    @media screen and (max-width: 1024px){
+        flex-direction: column;
+    }
 `
 const Box_left_tk = styled.div`
     width:100%;
@@ -71,6 +75,11 @@ const Box_left_tk = styled.div`
     
     .img_video{
         width:100%;
+
+        @media screen and (max-width: 1024px){
+            width: 80%;
+            margin: 0 auto;
+        }
     }
 
     p{
@@ -103,11 +112,21 @@ const Box_right_tk = styled.div`
     width:100%;
     position: relative;
 
+    @media screen and (max-width: 1024px){
+        width:80%;
+    }
+
     .text_right{
         width:100%;
         text-align:left;    
         padding-bottom:28px;
         padding-left:20%;
+
+        @media screen and (max-width: 1024px){
+            width: 100%;
+            text-align: center;
+            padding: 3.5rem 0;
+        }
         h1{
             color:white;
             font-weight:600;

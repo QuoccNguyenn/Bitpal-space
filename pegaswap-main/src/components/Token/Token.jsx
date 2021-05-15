@@ -155,6 +155,12 @@ import Button from '../Buttons/Button';
             border-radius:50%;
             position:relative;
 
+            @media screen and (max-width: 600px){
+
+                width:400px;
+                height:400px;
+            }
+
             .item:hover{
                 .text-circle{
                     display:block;
@@ -186,6 +192,14 @@ import Button from '../Buttons/Button';
                     p{
                         font-size:16px;
                         color: #888;
+
+                        @media screen and (max-width:600px){
+                            font-size: 13px;
+                            color: #888;
+                            text-align: center;
+                            margin: 0;
+                            width: 100%;
+                        }
                     }
                 }
 
@@ -214,6 +228,13 @@ import Button from '../Buttons/Button';
                 top: 0;
                 left: 50%;
                 transform: translate(-50%, -50%);
+
+                @media screen and (max-width: 600px){
+
+                    width:100px;
+                    height:100px;
+                    line-height:100px;
+                }
 
                 .img-hv{
                     display: none;
@@ -288,6 +309,12 @@ import Button from '../Buttons/Button';
                 color: white;
                 text-align: center;
                 display:none;
+
+                @media screen and (max-width:600px){
+                    p{
+                        margin:0;
+                    }
+                }
             }
         `
 

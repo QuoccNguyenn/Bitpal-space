@@ -74,13 +74,15 @@ const Box_ab = styled.section`
     width:100%;
     overflow:hidden;
     padding:7.5rem 0;
-
     position: relative;
 `
 const BannerTeam = styled.div`
     position: absolute;
     top: 0;
     left: 5%;
+    @media screen and (max-width: 768px){
+        padding: 3.5rem 0;
+    }
 `
 
 const BannerLetter = styled.span`
@@ -121,6 +123,7 @@ const Ab_left = styled.div`
         }
 
         p{
+            text-align: left;
             display: block;
             margin: 14px 0 0;
             font-family: "Open Sans",sans-serif;
@@ -141,9 +144,17 @@ const List_ab = styled.div`
     width:100%;
     display: flex;
     flex-direction: row;
+    @media screen and (max-width:600px){
+        flex-direction: column;
+
+        ul{
+            margin:0;
+        }
+    }
     ul{
         padding:0;
         width:100%;
+
 
        li{
         padding: 5px 0;
