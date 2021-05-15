@@ -13,7 +13,7 @@ return(
     <Box_ab>
         <div className="container">
             <div className="row">
-                <Ab_left className="col-md-5">
+                <Ab_left className="col-xl-5">
                     <div className="text_left">
                         <h1>About</h1>
                         <h5>Aliquam lorem ante, dapibus in, viverra quis, feugiat tellus. Phasellus viverra nulla ut metus varius laore.</h5>
@@ -37,7 +37,7 @@ return(
                     </List_ab>
                     
                 </Ab_left>
-                <Ab_right className="col-md-7">
+                <Ab_right className="col-xl-7">
                     <Video>
                         <div className="img_video">
                             <img src="https://bitpal.qodeinteractive.com/wp-content/uploads/2018/07/h1-img-1.png" alt="" />
@@ -72,6 +72,10 @@ const Box_ab = styled.section`
 const Ab_left = styled.div`
     width:100%;
 
+    @media screen and (max-width:1024px){
+        width: 80%;
+        margin: 0 auto;
+    }
     .text_left{
         text-align:left;    
         padding-bottom:28px;
@@ -132,6 +136,11 @@ const Video = styled.div`
     width:100%;
     position: relative;
 
+    @media screen and (max-width: 1024px){
+        width: 90%;
+        margin: 0 auto;
+        padding:2rem 0;
+    }
     a{
         position: absolute;
         width: 100%;

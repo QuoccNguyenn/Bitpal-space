@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import NavBar from './components/nav/nav';
 import Home from './view/Home/Home';
+import Marquee from "react-fast-marquee";
+import Nav_Mobi from './components/nav_mobile/nav_mobi';
 
 const App = () => {
 
@@ -13,14 +15,18 @@ const App = () => {
             <div className="item-line"></div>
             <div className="item-line"></div>
         </Boxline>
-
+          <Marquee className="slide_top">
+            
+        </Marquee>
           <NavBar></NavBar>
+          <Nav_Mobi></Nav_Mobi>
           <Home></Home>
     </Box_app>
   ) ;
 }
 
 const Box_app = styled.div`
+
   width:100%;
   position: relative;
   overflow: hidden;
@@ -31,7 +37,18 @@ const Box_app = styled.div`
       max-width:1140px;
     }
   }
+
   
+
+  ::selection {
+    background: #aceb2f;
+    color: #fff;
+}
+
+  .slide_top{
+    width:100%;
+    height
+  }
 `
 const  Boxline = styled.div`
     position:absolute;
