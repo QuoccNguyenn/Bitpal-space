@@ -8,7 +8,7 @@ const Header=() =>{
             <Content_hd>
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-6">
+                        <div className="col-xl-6">
                             <Left_content>
                                 <div className="text_content"> First Mining ICO Token StartUp</div>
                                 <p>Regarded as a synonym to cryptocurrency, blockchain is much more than a payment option.</p>  
@@ -24,7 +24,7 @@ const Header=() =>{
                             </Left_content>    
                            
                         </div>
-                        <div className="col-md-6">
+                        <div className="col-xl-6">
                             <Right_content>
                                 <Box_right>
                                     <div className="title_box">Edge ICO Ends in</div>
@@ -77,7 +77,7 @@ const Header=() =>{
 
 
 const Box_hd = styled.section`
-    background:url('images/bg_hd.png');
+    background:url('images/bg_header.png');
     width:100%;
     min-height:1000px;
     position:relative;
@@ -89,7 +89,12 @@ const Content_hd = styled.div`
 
 const Left_content = styled.div`
     width:100%;
-    height:500px;
+    padding 2.5rem 0;
+    @media screen and (max-width:1024px){
+        width: 70%;
+        margin: 0 auto;
+    }
+
     .text_content{
         max-width:100%;
         font-size:75px;
@@ -129,7 +134,12 @@ const Left_content = styled.div`
 
 const Right_content = styled.div`
     width:100%;
-    height:500px;
+    padding: 2.5rem 0;
+
+    @media screen and (max-width: 1024px){
+        width: 80%;
+        margin: 0 auto;
+    }
 `
 
 const Box_right = styled.div`

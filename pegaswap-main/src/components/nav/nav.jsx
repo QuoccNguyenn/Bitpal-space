@@ -81,6 +81,8 @@ const arrE =[
     }
 ]
 
+
+
 const NavBar=()=>{
     const[child_home,Setchild_home]= useState(arrHome);
     const[child_pages,Setchild_pages]= useState(arrPages);
@@ -90,8 +92,9 @@ const NavBar=()=>{
     const[child_shop,Setchild_shop]= useState(arrshop);
     const[child_E,Setchild_E]= useState(arrE);
 
+   
    return(
-        <Box_nav>
+        <Box_nav className="nav_pc">
             <Nav className="container">
                 <Menu>
                     <Logo_nav>
@@ -100,63 +103,18 @@ const NavBar=()=>{
                     <Contents_nav>
 
                         <ul>
-                            <li className="active"><a href="">HOME</a>
-                                <Child_menu child_arr ={child_home}></Child_menu>
-                            </li>
-                            <li ><a href="">PAGES</a>
-                                <Child_menu child_arr ={child_pages}></Child_menu>
-                            </li>
-                            <li ><a href="">CURRENCIES</a>
-                            <Child_menu child_arr ={child_Curent}></Child_menu>
-                            </li>
-                            <li><a href="">PORTFOLIO</a>
-                                <Child className="child">
-                                    {child_pf.filter(chl=>chl.Subchild==0).map((chl,idx)=>(
-                                        <li key={idx} className=""><a href="" className="a_child">{chl.name}</a></li>
-                                    ))}
-                                    {child_pf.filter(chl=>chl.Subchild==1).map((chl,idx)=>(
-                                        <li key={idx} className=""><a href="" className="a_child">{chl.name}</a> <i class="fas fa-arrow-right"></i>
-                                            <Submenu className="sub left">
-                                                {chl.sub.map((sub,idx)=>(
-                                                    <li key={idx}><a href="" className="a_sub">{sub}</a></li>
-                                                ))}
-                                            </Submenu>
-                                        </li>
-                                    ))}
-                                </Child></li>
+                            <li className="active"><a href="">HOME</a><Child_menu child_arr ={child_home} Clname  ></Child_menu></li>
 
-                            <li><a href="">BLOG</a>
-                                <Child className="child">
-                                        {child_blog.filter(chl=>chl.Subchild==0).map((chl,idx)=>(
-                                            <li key={idx} className=""><a href="" className="a_child">{chl.name}</a></li>
-                                        ))}
-                                        {child_blog.filter(chl=>chl.Subchild==1).map((chl,idx)=>(
-                                            <li key={idx} className=""><a href="" className="a_child">{chl.name}</a> <i class="fas fa-arrow-right"></i>
-                                                <Submenu className="sub left">
-                                                    {chl.sub.map((sub,idx)=>(
-                                                        <li key={idx}><a href="" className="a_sub">{sub}</a></li>
-                                                    ))}
-                                                </Submenu>
-                                            </li>
-                                        ))}
-                                    </Child>
-                            </li>
-                            <li><a href="">SHOP</a>
-                                    <Child className="child right">
-                                                {child_blog.filter(chl=>chl.Subchild==0).map((chl,idx)=>(
-                                            <li key={idx} className=""><a href="" className="a_child">{chl.name}</a></li>
-                                        ))}
-                                        {child_blog.filter(chl=>chl.Subchild==1).map((chl,idx)=>(
-                                            <li key={idx} className=""><a href="" className="a_child">{chl.name}</a> <i class="fas fa-arrow-right"></i>
-                                                <Submenu className="sub right">
-                                                    {chl.sub.map((sub,idx)=>(
-                                                        <li key={idx}><a href="" className="a_sub">{sub}</a></li>
-                                                    ))}
-                                                </Submenu>
-                                            </li>
-                                        ))}
-                                    </Child>
-                                </li>
+                            <li ><a href="">PAGES</a><Child_menu child_arr ={child_pages} Clname ></Child_menu></li>
+
+                            <li ><a href="">CURRENCIES</a><Child_menu child_arr ={child_Curent} Clname ></Child_menu></li>
+
+                            <li><a href="">PORTFOLIO</a><Child_menu child_arr ={child_pf} Clname ></Child_menu></li>
+
+                            <li><a href="">BLOG</a><Child_menu child_arr ={child_blog} Clname></Child_menu></li>
+
+                            <li><a href="">SHOP</a><Child_menu child_arr ={child_shop} Clname={false}></Child_menu></li>
+                            
                             <li className="hv_e"><a href="">ELEMENTS</a>
                                 <Nav_e className="child_e">
                                     <div className="container">
@@ -198,6 +156,11 @@ const Box_nav= styled.nav`
     left:0;
     right:0;
     z-index:9999999;
+    &.nav_pc{
+        @media screen and (max-width:1200px){
+          display:none !important;
+        }
+      }
 `
 
 const Nav = styled.div`
@@ -300,7 +263,7 @@ const Btn_menu = styled.div`
 `
 
 
-const Child = styled.ul`
+/* const Child = styled.ul`
     position: absolute;
     background: #151515;
     border: 1px #303030;
@@ -489,7 +452,7 @@ const Submenu = styled.ul`
     }
     }
 `
-
+ */
 const Nav_e = styled.div`
 
     position: absolute;

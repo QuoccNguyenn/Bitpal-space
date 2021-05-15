@@ -1,10 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Submenu = () =>{
-
+const Submenu = ( props) =>{
+    let{sub,Clname} = props;
     return(
-        <Box_sub></Box_sub>
+        <Box_sub className={Clname ?"sub" :"sub right"}>
+             {sub.map((chl,idx)=>(
+                     <li key={idx}><a href="" className="a_sub">{chl}</a></li>
+                ))}
+        </Box_sub>
     );
 
 }
@@ -19,16 +23,17 @@ const Box_sub= styled.ul`
     padding: 0;
     text-aglin: left;
     top: 0;
-    left:-109%;
+    left:100%;
     width: 235px;
     padding: 20px 0 0 20px  !important;
     height:auto !important;
     display:none !important;
 
     &.right{
+        left:-109%;
+
         li{
             :hover{
-            
                 
                     a.a_sub{
                         transform: translateX(-40px);
@@ -66,9 +71,6 @@ const Box_sub= styled.ul`
                 i{
                     right: 0;
                     color:white;
-                }
-                .sub{
-                    display: block !important;
                 }
             }
     }

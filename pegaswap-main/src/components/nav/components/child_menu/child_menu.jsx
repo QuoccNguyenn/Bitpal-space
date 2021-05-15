@@ -1,17 +1,35 @@
 import React from 'react';
 import styled from 'styled-components';
+import Submenu from '../child_sub_menu/sub_menu';
 
 
 const Child_menu= (props) => {
-    let{child_arr,class_r} = props;
+    let{child_arr,Clname} = props;
     return(
-        <Box_child className="child">
-             {child_arr.map((chl,idx)=>(
-                <li key={idx} className={idx==0?"active":""}><a href="" className="a_child">{chl}</a></li>
+        <Box_child className={Clname ?"child":"child right"}>
+
+             {child_arr.filter(chl => typeof(chl) =="string").map((chl,idx)=>(
+                 <li key={idx}><a href="" className="a_child">{chl}</a></li>    
             ))}
+
+            {child_arr.filter(chl => typeof(chl) =="object").map((chl,idx)=>(
+                <li key={idx} ><a href="" className="a_child">{chl.name}</a> {chl.sub?<i class="fas fa-arrow-right"></i>:""}
+                    {chl.sub? 
+                        <Submenu sub={chl.sub} Clname={Clname}>
+                            
+                        </Submenu>
+                    :    
+                    ""
+                }
+                </li> 
+            ))}
+
         </Box_child>
     );
 }
+
+               
+
 
 const Box_child = styled.ul`
     position: absolute;
@@ -101,7 +119,7 @@ const Box_child = styled.ul`
         }
 
         a.a_child{
-            color:#989898;
+            color:#989898 !important;
             display:inline-block;
         }
         

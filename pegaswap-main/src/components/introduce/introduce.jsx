@@ -36,6 +36,10 @@ const Box_intro = styled.section`
     width:100%;
     position:relative;
     top:-200px;
+
+    @media screen and (max-width:1024px){
+        top: -50px;
+    }
 `
 
 const WrapperItro =  styled.div`

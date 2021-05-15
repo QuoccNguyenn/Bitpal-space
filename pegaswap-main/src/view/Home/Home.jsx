@@ -13,6 +13,7 @@ import Partner from '../../components/Partner/Partner';
 import News from '../../components/News/News';
 import Footer from '../../components/Footer/Footer';
 import Quality from '../../components/Quality/Quality';
+import Video from '../../components/video2/video';
 
 
 
@@ -40,6 +41,8 @@ const Home = ({title}) => {
 
           <Feature/>
 
+          <Video></Video>
+
           <Partner/>
 
           <News/>
@@ -55,7 +58,6 @@ const Home = ({title}) => {
 const Box_home = styled.section`  
   width:100%;
   overflow:hidden;
-
 `
 
 

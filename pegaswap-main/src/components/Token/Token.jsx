@@ -65,13 +65,11 @@
         const Token=() => {
 
             const[item,Setitem] = useState(arr);
-            const[at,Set_at] = useState(false);
             const[demo,Setdemo] = useState(0);
             var dem = demo;
             const add_active = (idx) => {
                 Setdemo(idx);
                 dem=idx;
-                console.log(` hover: ${dem}`);
             }
             useEffect(() => {
                 const interval = setInterval(() => {
@@ -81,7 +79,7 @@
                     }else{
                         Setdemo(dem++);
                     }
-                }, 2000);
+                }, 1500);
                 return () => clearInterval(interval);
             }, [demo]);
 
@@ -135,6 +133,10 @@
             flex-direction: row;
             align-items: center;
             padding: 0;
+
+            @media screen and (max-width: 1024px){
+                flex-direction:column;
+            }
         `
         const Box_left_tk = styled.div`
             width:100%;
@@ -173,6 +175,17 @@
                 .text-circle{
                     display:block;
                     animation: run_text 2s ;
+                    font-family: 'Roboto', sans-serif;
+
+                    span{
+                        color:#aceb2f;
+                    }
+
+
+                    p{
+                        font-size:16px;
+                        color: #888;
+                    }
                 }
 
             /*  @keyframes run_text {
@@ -280,11 +293,24 @@
         const Box_right_tk = styled.div`
             width:100%;
 
+            @media screen and (max-width:1024px){
+                padding: 7.5rem 0;
+            }
+
             .text_right{
                 width:100%;
                 text-align:left;    
                 padding-bottom:28px;
                 padding-left:20%;
+
+                @media screen and (max-width: 1024px){
+                    width: 80%;
+                    text-align: center;
+                    padding-left:0;
+                    margin: 0 auto;
+
+
+                }
                 h1{
                     color:white;
                     font-weight:600;
