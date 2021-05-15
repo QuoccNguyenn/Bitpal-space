@@ -13,6 +13,7 @@ import Partner from '../../components/Partner/Partner';
 import News from '../../components/News/News';
 import Footer from '../../components/Footer/Footer';
 import Quality from '../../components/Quality/Quality';
+import Roadmap from '../../components/Roadmap/Roadmap';
 
 
 
@@ -33,6 +34,7 @@ const Home = ({title}) => {
           <Quality/>
 
           {/* Cho nay cua Roadmap */}
+          <Roadmap/>
 
           <Team/>
 
