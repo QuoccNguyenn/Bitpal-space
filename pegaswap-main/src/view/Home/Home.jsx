@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Team from '../../components/Team/Team'
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import OurTeam from '../../components/OurTeam/OurTeam';
 import Feature from '../../components/Feature/Feature';
@@ -13,10 +13,9 @@ import Partner from '../../components/Partner/Partner';
 import News from '../../components/News/News';
 import Footer from '../../components/Footer/Footer';
 import Quality from '../../components/Quality/Quality';
-
 import Roadmap from '../../components/Roadmap/Roadmap';
-
 import Video from '../../components/video2/video';
+import ScrollButton from '../../components/ButtonScroll/ScrollButton';
 
 
 
@@ -30,7 +29,7 @@ const Home = ({title}) => {
             <Header></Header>
             <Introduce></Introduce>
             <About></About>
-            <Token></Token> 
+            <Token></Token>
 
           {/* A. nguyen */}
 
@@ -53,13 +52,15 @@ const Home = ({title}) => {
 
           <Footer/>
 
+          <ScrollButton/>
+
         </WrapperHome>
 
     </Box_home>
   )
 }
 
-const Box_home = styled.section`  
+const Box_home = styled.section`
   width:100%;
   overflow:hidden;
 `

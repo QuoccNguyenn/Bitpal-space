@@ -1,5 +1,6 @@
         import React, { useEffect, useState } from 'react'
         import styled from 'styled-components'
+import Button from '../Buttons/Button';
 
         const arr = [
             {
@@ -113,7 +114,7 @@
                                         Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullam corper ultricies nisi. Nam eget dui.
                                         Etiam rhoncus. <span>Maecenas tem pus</span>, tellus eget condimentum rhoncus, sem quam semper fabul</p>
                                 <div className="btn">
-                                    <a href="">PURCHASE</a>
+                                    <Button name='PURCHASE'/>
                                 </div>
                             </div>
 

@@ -174,11 +174,17 @@ const Brand = styled.div`
 
 const Images = styled.img`
     display: block;
-    margin: 0!important
+    margin: 0!important;
+    @media screen and (max-width: 768px){
+        height: 70%!important;
+    }
 `
 
 const ImagesHover = styled.img`
     display: none;
+    @media screen and (max-width: 768px){
+        height: 70%!important;
+    }
 `
 
 export default Partner;
