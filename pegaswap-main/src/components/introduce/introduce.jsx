@@ -66,6 +66,10 @@ const WrapperItro =  styled.div`
             font-weight: 400;
             line-height: 26px;
             color: #888;
+
+            @media screen and (max-width:415px){
+                width:100%;
+            }
         }
     }
 `

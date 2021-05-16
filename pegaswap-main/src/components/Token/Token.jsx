@@ -126,6 +126,10 @@
         const Box_tk = styled.section`
             width:100%;
             padding:7.5rem 0;
+
+            @media screen and (max-width:600px){
+                padding:1.5rem 0 ;
+            }
         `
 
         const Content_tk = styled.div`
@@ -140,7 +144,6 @@
         `
         const Box_left_tk = styled.div`
             width:100%;
-            height: 500px;
             display:flex;
             flex-direction:row;
             justify-content:center;
@@ -158,6 +161,17 @@
 
                 width:400px;
                 height:400px;
+            }
+
+            @media screen and (max-width: 415px){
+
+                width:300px;
+                height:300px;
+            }
+
+            @media screen and (max-width: 350px){
+                width:250px;
+                height:250px;
             }
 
             .item:hover{
@@ -191,13 +205,19 @@
                     p{
                         font-size:16px;
                         color: #888;
+                        text-align: center;
+                        margin: 0;
+                        width: 100%;
 
                         @media screen and (max-width:600px){
-                            font-size: 13px;
-                            color: #888;
-                            text-align: center;
-                            margin: 0;
-                            width: 100%;
+                            display:none;
+
+                        }
+                    }
+
+                    @media screen and (max-width:415px){
+                        h4{
+                            font-size:18px;
                         }
                     }
                 }
@@ -235,8 +255,38 @@
                     line-height:100px;
                 }
 
+                @media screen and (max-width: 415px){
+
+                    width:50px;
+                    height:50px;
+                    line-height:50px;
+                }
+
+                .img{
+                    display:block;
+
+                    img{
+                        max-width: 50px;
+                        width: 100%;
+                        object-fit: cover;
+                        @media screen and (max-width:415px){
+                            max-width: 25px;
+                        }
+                    }
+                }
+
                 .img-hv{
                     display: none;
+
+                    img{
+                        max-width: 50px;
+                        width: 100%;
+                        object-fit: cover;
+
+                        @media screen and (max-width:415px){
+                            max-width: 25px;
+                        }
+                    }
                 }
                 
 
@@ -319,9 +369,14 @@
 
         const Box_right_tk = styled.div`
             width:100%;
+            position:relative;
 
             @media screen and (max-width:1024px){
                 padding: 7.5rem 0;
+            } 
+            
+            @media screen and (max-width:600px){
+                padding: 4.5rem 0;
             }
 
             .text_right{
@@ -332,12 +387,11 @@
 
                 @media screen and (max-width: 1024px){
                     width: 80%;
-                    text-align: center;
                     padding-left:0;
                     margin: 0 auto;
-
-
                 }
+
+
                 h1{
                     color:white;
                     font-weight:600;
@@ -368,7 +422,7 @@
                 }
 
                     .btn{
-            
+                        padding:0;
                         a{
                             display:block;
                             text-decoration:none;

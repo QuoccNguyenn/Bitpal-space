@@ -48,7 +48,7 @@ return(
                         </a>
 
                         <Modal isOpen={modal} fade={false} toggle={toggle} className="as" style={{maxWidth: '100vw', width: '100%',height:"100vh",margin:"0px",display:"flex", justifyContent: "center",alignItems:"center"}}>
-                        <ModalBody className="modal-video"  style={{width: '100%',height:"60vh" ,padding:"0px"}}>
+                        <ModalBody className="modal-video"  style={{width: '100%' ,padding:"0px"}}>
                         <Iframe url="https://player.vimeo.com/video/267777924?title=0&byline=0&portrait=0&autoplay=1;"
                             width="100%"
                             height="100%"
@@ -80,6 +80,12 @@ const Ab_left = styled.div`
         width: 80%;
         margin: 0 auto;
     }
+
+    @media screen and (max-width:415px){
+        width: 100%;
+        margin: 0 auto;
+    }
+
     .text_left{
         text-align:left;    
         padding-bottom:28px;
@@ -94,9 +100,9 @@ const Ab_left = styled.div`
             font-size: 18px;
             font-style: italic;
             font-weight: 400;
-            line-height: 28px;
+            line-height: 35px;
             margin: 11px 0 0 0;
-            
+            font-family: 'Roboto', sans-serif;
         }
 
         p{
@@ -129,7 +135,7 @@ const List_ab = styled.div`
         }
     }
     ul{
-        padding:0;
+        
         width:100%;
 
 

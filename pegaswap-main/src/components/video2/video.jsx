@@ -22,7 +22,7 @@ const Video=() => {
                         </p>
 
                         <Modal isOpen={modal} fade={false} toggle={toggle} className="as" style={{maxWidth: '100vw', width: '100%',height:"100vh",margin:"0px",display:"flex", justifyContent: "center",alignItems:"center"}}>
-                        <ModalBody className="modal-video"  style={{width: '100%',height:"60vh" ,padding:"0px"}}>
+                        <ModalBody className="modal-video"  style={{width: '100%' ,padding:"0px"}}>
                         <Iframe url="https://player.vimeo.com/video/254930827?title=0&byline=0&portrait=0&autoplay=1;"
                             width="100%"
                             height="100%"
@@ -52,6 +52,10 @@ const Box_tk = styled.section`
     padding:7.5rem 0;
     background:url(https://bitpal.qodeinteractive.com/wp-content/uploads/2018/08/h1-background-img-2.png);
     background-size:cover;
+
+    @media screen and (max-width: 600px){
+        padding:1.5rem 0;
+    }
 `
 
 const Content_tk = styled.div`
@@ -66,7 +70,6 @@ const Content_tk = styled.div`
 `
 const Box_left_tk = styled.div`
     width:100%;
-    height: 500px;
     display:flex;
     flex-direction:row;
     justify-content:center;

@@ -121,6 +121,10 @@ const Left_content = styled.div`
         @media screen and (max-width:415px){
             font-size: 35px;
         }
+
+        @media screen and (max-width:380px){
+            font-size: 25px;
+        }
     }
     p{
         max-width:100%;
@@ -143,7 +147,7 @@ const Left_content = styled.div`
 
     .box_btn{
         .btn{
-
+            padding:10px 10px 0 0 ;
             a{
                 display:block;
                 text-decoration:none;
@@ -214,7 +218,7 @@ const Box_right = styled.div`
     }
 
     .item_time{
-        width: 25%;
+        width: 20%;
         margin: 0 7px;
 
         @media screen and (max-width: 768px){
@@ -252,7 +256,7 @@ const Box_right = styled.div`
     }
 
     .btn{
-
+        width:100%;
         a{
             display:block;
             text-decoration:none;
