@@ -170,6 +170,14 @@ const Box_right_tk = styled.div`
 
                 img{
                     transition:all .5s;
+
+                    @media screen and (max-width: 768px){
+                        max-width:150px;
+                    }
+
+                    @media screen and (max-width:415px){
+                        max-width:100px;
+                    }
                 }
 
                 :hover{

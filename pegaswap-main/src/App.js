@@ -15,8 +15,8 @@ const App = () => {
             <div className="item-line"></div>
             <div className="item-line"></div>
         </Boxline>
-          <Marquee className="slide_top">
-            
+          <Marquee >
+            asdkljasdlkjasdjaklsdjalksj
         </Marquee>
           <NavBar></NavBar>
           <Nav_Mobi></Nav_Mobi>

@@ -91,7 +91,7 @@ import Button from '../Buttons/Button';
                             <Circle>
 
                                 {item.map((it,idx)=>(
-                                    <div key={idx} className={ demo==idx ?"item active":"item "} onMouseOver={()=>add_active(idx)}>
+                                    <div key={idx} className={ demo==idx ?"item active":"item"} onMouseOver={()=>add_active(idx)}>
                                     <div className={`item-circle ${it.class_it}`}>
                                         <span className="img"><img src={`images/${it.img}`} alt="" /></span>
                                         <span className="img-hv"><img src={`images/${it.img_hv}`} alt="" /></span>
@@ -175,11 +175,6 @@ import Button from '../Buttons/Button';
                 height:250px;
             }
 
-            .item:hover{
-                .text-circle{
-                    display:block;
-                }
-            } 
 
             .item.active {
                 
