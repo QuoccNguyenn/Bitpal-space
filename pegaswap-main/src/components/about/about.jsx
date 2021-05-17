@@ -81,7 +81,7 @@ const BannerTeam = styled.div`
     top: 0;
     left: 5%;
     @media screen and (max-width: 768px){
-        padding: 3.5rem 0;
+        display: none;
     }
 `
 

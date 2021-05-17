@@ -53,7 +53,7 @@ const NewsSection = styled.section`
     padding: 10% 15px 3%;
     clear: both;
     @media screen and (max-width: 1024px){
-        padding: 0 15px 3%;
+        padding: 10% 15px 3%;
     }
 `
 
@@ -62,7 +62,10 @@ const BannerTeam = styled.div`
     top: -10%;
     left: 5%;
     @media screen and (max-width: 1024px){
-        top: -45%;
+        top: -5%;
+    }
+    @media screen and (max-width: 768px){
+        display: none;
     }
 `
 

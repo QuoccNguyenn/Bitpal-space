@@ -259,7 +259,7 @@ const RoadmapSection = styled.section`
         min-height: 300px;
 
         .slick-prev, .slick-next {
-            top: -2.5px;
+            top: -3.5px;
             z-index: 2;
         }
         .slick-next{
@@ -369,6 +369,7 @@ const RoadmapContent = styled.div`
     @media screen and (max-width: 480px){
         bottom: unset !important;
         top: 75px;
+        margin: 0 8%;
 
         :after{
             bottom: 100% !important;

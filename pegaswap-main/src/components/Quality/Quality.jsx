@@ -91,28 +91,26 @@ const QualityContainer = styled.div `
     @media screen and (max-width: 1024px){
         img{
             max-width: 175%;
-            margin-top: 50%;
             margin-left: -55%;
         }
     }
     @media screen and (max-width: 768px){
         img{
             max-width: 183%;
-            margin-top: 10%;
             margin-left: -70%;
         }
     }
     @media screen and (max-width: 415px){
         img{
             max-width: 400%;
-            margin-top: 70%;
             margin-left: -150%;
         }
     }
-    @media screen and (max-width: 375px)
-    img {
-        max-width: 512%;
-        margin-left: -325%;
+    @media screen and (max-width: 375px){
+        img {
+            max-width: 512%;
+            margin-left: -325%;
+        }
     }
 `
 

@@ -39,9 +39,6 @@ const ButtonOutter = styled.a`
         width: 225%;
         height: 562.5px;
     }
-    :active {
-        background-color: #aceb2f;
-    }
   
 `
 

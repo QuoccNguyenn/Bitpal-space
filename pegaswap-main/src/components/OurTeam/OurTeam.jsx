@@ -171,6 +171,9 @@ const BannerTeam = styled.div`
     position: absolute;
     top: 0;
     left: 5%;
+    @media screen and (max-width: 768px){
+        display: none;
+    }
 `
 
 const BannerLetter = styled.span`
