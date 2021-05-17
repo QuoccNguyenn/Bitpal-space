@@ -171,6 +171,9 @@ const BannerTeam = styled.div`
     position: absolute;
     top: 0;
     left: 5%;
+    @media screen and (max-width: 768px){
+        display: none;
+    }
 `
 
 const BannerLetter = styled.span`
@@ -201,6 +204,10 @@ const BodyContainer = styled.div`
     }
 
     @media screen and (max-width: 768px){
+        justify-content: flex-start;
+    }
+
+    @media screen and (max-width: 415px){
         justify-content: center;
     }
 `

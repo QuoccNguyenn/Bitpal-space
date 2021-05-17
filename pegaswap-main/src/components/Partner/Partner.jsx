@@ -61,28 +61,25 @@ function Partner() {
 
     return(
         <PartnerSection>
-            <ParallaxProvider>
-                <PartnerContainer>
-                    <Parallaxie src='../../images/h1-parallax-img-3.jpeg'/>
+            <PartnerContainer>
 
-                    <BodyContainer>
-                        <HeaderTitle header='Strategic Partners'/>
+                <BodyContainer>
+                    <HeaderTitle header='Strategic Partners'/>
 
-                        <BodyBrand>
-                            <BrandContainer>
-                            {state.images.map(item => (
-                                <Brand>
-                                    <Images className='img' src = {item.src}/>
-                                    <ImagesHover className='img-hover' src = {item.srcHover}/>
-                                </Brand>
-                            ))}
-                                
-                            </BrandContainer>
-                        </BodyBrand>
+                    <BodyBrand>
+                        <BrandContainer>
+                        {state.images.map(item => (
+                            <Brand>
+                                <Images className='img' src = {item.src}/>
+                                <ImagesHover className='img-hover' src = {item.srcHover}/>
+                            </Brand>
+                        ))}
+                            
+                        </BrandContainer>
+                    </BodyBrand>
 
-                    </BodyContainer>    
-                </PartnerContainer>
-            </ParallaxProvider>
+                </BodyContainer>    
+            </PartnerContainer>
         </PartnerSection>
     );
 }
@@ -90,6 +87,14 @@ function Partner() {
 const PartnerSection = styled.section`
     overflow: hidden;
     clear: both;
+    
+    background-image: url(../../images/h1-parallax-img-3.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    position: relative;
+
     @media screen and (max-width: 1024px){
         max-height: 1024px;
     }
@@ -98,7 +103,6 @@ const PartnerSection = styled.section`
     }
 `
 const PartnerContainer = styled.div`
-    position: relative;
 
     @media screen and (max-width: 1024px){
         img{
@@ -124,8 +128,6 @@ const PartnerContainer = styled.div`
 
 const BodyContainer = styled.div`
     padding-top: 5%;
-    position: absolute;
-    top: 0;
 
     @media screen and (max-width: 1024px){
         padding-top: 1%;
@@ -169,6 +171,15 @@ const Brand = styled.div`
 
     @media screen and (max-width: 768px){
         width: 50%;
+        height: 135px;
+    }
+
+    @media screen and (max-width: 415px){
+        height: 135px;
+    }
+
+    @media screen and (max-width: 375px){
+        height: 120px;
     }
 `
 
@@ -182,6 +193,7 @@ const Images = styled.img`
 
 const ImagesHover = styled.img`
     display: none;
+    margin: 0!important;
     @media screen and (max-width: 768px){
         height: 70%!important;
     }
