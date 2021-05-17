@@ -32,14 +32,14 @@ return(
 
                     <List_ab>
                         <ul>
-                        <li>Blockchain Strategy</li>
-                            <li>ICO Progress</li>
-                            <li>Financial Services</li>
+                            <li><span>Blockchain Strategy</span></li>
+                            <li><span>ICO Progress</span></li>
+                            <li><span>Financial Services</span></li>
                         </ul>
                         <ul>
-                        <li>Financial Services</li>
-                            <li>Blockchain Strategy</li>
-                            <li>ICO Progress</li>
+                        <li><span>Financial Services</span></li>
+                        <li><span>Blockchain Strategy</span></li>
+                        <li><span>ICO Progress</span></li>
                         </ul>
                     </List_ab>
                     
@@ -164,8 +164,13 @@ const List_ab = styled.div`
 
        li{
         padding: 5px 0;
-        color: #ffffff;
+        color: #aceb2f;
         padding-left: 15px;
+        list-style-type:square;
+
+        span {
+            color: #ffffff;
+        }
        }
     }
 `

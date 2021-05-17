@@ -358,6 +358,11 @@ const Nav_menu = styled.div`
         width: 100%;
         height:590px;
         
+        .pro-sidebar .pro-menu .pro-menu-item {
+            font-size: 15px;
+            line-height: 40px;
+        }
+
         .pro-sidebar-inner{
             background:transparent;
         }
@@ -400,7 +405,7 @@ const Nav_menu = styled.div`
             
             /* Handle */
             ::-webkit-scrollbar-thumb {
-            background: white; 
+            background:#aceb2f ; 
             border-radius: 10px;
             }
         }

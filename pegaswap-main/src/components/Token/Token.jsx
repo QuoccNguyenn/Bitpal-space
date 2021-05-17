@@ -63,16 +63,17 @@ import Button from '../Buttons/Button';
             },
         ]
 
-        const Token=() => {
+        const Token=(props) => {
 
             const[item,Setitem] = useState(arr);
             const[demo,Setdemo] = useState(0);
+            let {run_Cir} = props;
             var dem = demo;
             const add_active = (idx) => {
                 Setdemo(idx);
                 dem=idx;
             }
-            useEffect(() => {
+            /* useEffect(() => {
                 const interval = setInterval(() => {
                     console.log(` slide: ${dem}`);
                     if(dem>7){
@@ -82,28 +83,27 @@ import Button from '../Buttons/Button';
                     }
                 }, 1500);
                 return () => clearInterval(interval);
-            }, [demo]);
+            }, [demo]); */
 
             return(
                 <Box_tk>
                     <Content_tk className="container">
                         <Box_left_tk>
-                            <Circle>
-
-                                {item.map((it,idx)=>(
-                                    <div key={idx} className={ demo==idx ?"item active":"item"} onMouseOver={()=>add_active(idx)}>
-                                    <div className={`item-circle ${it.class_it}`}>
-                                        <span className="img"><img src={`images/${it.img}`} alt="" /></span>
-                                        <span className="img-hv"><img src={`images/${it.img_hv}`} alt="" /></span>
+                            <Circle className={run_Cir?"run":""}>
+                                    {item.map((it,idx)=>(
+                                        <div key={idx} className={ demo==idx ?"item active":"item"} onMouseOver={()=>add_active(idx)}>
+                                        <div className={`item-circle ${it.class_it}`}>
+                                            <span className="img"><img src={`images/${it.img}`} alt="" /></span>
+                                            <span className="img-hv"><img src={`images/${it.img_hv}`} alt="" /></span>
+                                        </div>
+        
+                                        <div className={run_Cir?"text-circle run":"text-circle"}>
+                                            <span>{it.name}</span>
+                                            <h4>{it.title}</h4>
+                                            <p>{it.content}</p>
+                                        </div>
                                     </div>
-    
-                                    <div className="text-circle">
-                                        <span>{it.name}</span>
-                                        <h4>{it.title}</h4>
-                                        <p>{it.content}</p>
-                                    </div>
-                                </div>
-                                ))}
+                                    ))}
                             </Circle>
                         </Box_left_tk>
                         <Box_right_tk>
@@ -145,6 +145,7 @@ import Button from '../Buttons/Button';
         `
         const Box_left_tk = styled.div`
             width:100%;
+            height:500px;
             display:flex;
             flex-direction:row;
             justify-content:center;
@@ -157,6 +158,31 @@ import Button from '../Buttons/Button';
             border: 2px dashed #828282;
             border-radius:50%;
             position:relative;
+            display:none;
+            &.run{
+                animation: run_cir 5s;
+                display:block;
+
+            }
+
+
+            @keyframes run_it {
+                from {
+                    opacity:0;
+                } to{
+                    opacity:1;
+                }
+                
+              }
+
+            @keyframes run_cir {
+                from {
+                    width:200px;
+                    height:200px
+                }
+                
+              }
+            
 
             @media screen and (max-width: 600px){
 
@@ -176,6 +202,7 @@ import Button from '../Buttons/Button';
             }
 
 
+
             .item.active {
                 
                 .item-circle{
@@ -189,10 +216,20 @@ import Button from '../Buttons/Button';
                 }
 
                 .text-circle{
-                    display:block;
-                    animation: run_text 2s ;
+                    visibility: hidden;
+                    // display:none;
                     font-family: 'Roboto', sans-serif;
 
+                    visibility: visible;
+                    opacity: 1;
+                    
+                    
+
+                    // &.run{
+                    //     display:none;
+                    //     // animation: run_text 5s;
+                    //     transition-delay:10s;
+                    // }
                     span{
                         color:#aceb2f;
                     }
@@ -218,7 +255,7 @@ import Button from '../Buttons/Button';
                     }
                 }
 
-            /*  @keyframes run_text {
+             @keyframes run_text {
                     from {
                         opacity:0;
                     }
@@ -226,7 +263,7 @@ import Button from '../Buttons/Button';
                         opacity:1;
                     }
                 
-                } */
+                }
             }
 
             .item-circle{
@@ -353,7 +390,10 @@ import Button from '../Buttons/Button';
                 transform: translate(-50%, -50%);
                 color: white;
                 text-align: center;
-                display:none;
+                // display:none;
+                visibility: hidden;
+                opacity: 0;
+               
 
                 @media screen and (max-width:600px){
                     p{

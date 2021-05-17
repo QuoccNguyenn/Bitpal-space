@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import NavBar from './components/nav/nav';
 import Home from './view/Home/Home';
@@ -7,6 +7,19 @@ import Nav_Mobi from './components/nav_mobile/nav_mobi';
 import Slide_T from './components/slide_top/slide_top';
 
 const App = () => {
+
+  const[navbar,setNavbar] = useState(false);
+
+  const changedBackground=() =>{
+    if (window.scrollY >= 50){
+
+      setNavbar(true);
+    }else{
+        setNavbar(false);
+    }
+  }
+
+  window.addEventListener('scroll',changedBackground)
 
   return(
     <Box_app>
@@ -19,7 +32,7 @@ const App = () => {
           <Marquee gradientColor="[]" pauseOnHover="true" className="slide_top">
             <Slide_T></Slide_T>
         </Marquee>
-          <NavBar></NavBar>
+          <NavBar changedBackground={navbar}></NavBar>
           <Nav_Mobi></Nav_Mobi>
           <Home></Home>
     </Box_app>

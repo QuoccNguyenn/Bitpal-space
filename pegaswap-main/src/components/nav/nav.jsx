@@ -84,7 +84,7 @@ const arrE =[
 
 
 
-const NavBar=()=>{
+const NavBar=(props)=>{
     const[child_home,Setchild_home]= useState(arrHome);
     const[child_pages,Setchild_pages]= useState(arrPages);
     const[child_Curent,Setchild_Curent]= useState(arrCurentcies);
@@ -93,9 +93,10 @@ const NavBar=()=>{
     const[child_shop,Setchild_shop]= useState(arrshop);
     const[child_E,Setchild_E]= useState(arrE);
 
+    let {changedBackground} =props;
    
    return(
-        <Box_nav className="nav_pc">
+        <Box_nav className={changedBackground?"nav_pc fixed" :"nav_pc"}>
             <Nav className="container">
                 <Menu>
                     <Logo_nav>
@@ -161,6 +162,12 @@ const Box_nav= styled.nav`
           display:none !important;
         }
       }
+
+    &.fixed {
+        position: fixed;
+        background: black;
+        top: 0;
+    }
 `
 
 const Nav = styled.div`
@@ -262,196 +269,6 @@ const Btn_menu = styled.div`
 `
 
 
-/* const Child = styled.ul`
-    position: absolute;
-    background: #151515;
-    border: 1px #303030;
-    border-top: 2px solid #aceb2f;
-    border-radius: 3px;
-    box-sizing: border-box;
-    padding: 0;
-    text-aglin: left;
-    top: 100%;
-    width: 235px;
-    padding: 20px 0 0 20px  !important;
-    height:auto !important;
-    display:none !important;
-
-    &.right{
-        padding: 0 20px 0 0   !important;
-
-        li{
-            text-align: right;
-            padding: 0 20px 0 0;
-
-            :hover{
-
-                ::before{
-                    left:85%;
-                }
-           
-                a.a_child{
-                    transform: translateX(-30px);
-                }
-
-                i{
-                    right: 90%;
-                }
-            }
-
-            @keyframes run_left{
-                from{
-                    transform: translateX(20px);
-                }
-            }
-            i{
-                right: 80%;
-                transform: translateY(-50%)rotate(180deg);
-            }
-    }
-        }
-
-        
-    }
-
-    li{
-        cursor: pointer;
-        position: relative;
-        font-size: 14px;
-        line-height: 40px;
-        position:relative;
-
-        i{
-            position: absolute;
-            right: 25px;
-            top: 50%;
-            transform: translateY(-50%);
-            transition: all .5s;
-        }
-
-        ::before{
-            content: "";
-            width: 7px;
-            height: 7px;
-            background: #aceb2f;
-            position: absolute;
-            left: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            border-radius: 50%;
-            animation: run_left .5s;
-            display:none;
-        }
-
-        @keyframes run_left{
-            from{
-                transform: translateX(-20px);
-            }
-        }
-
-        a.a_child{
-            color:#989898;
-            display:inline-block;
-        }
-        
-        &.active::before{
-                display:block;
-        }
-
-        &.active a.a_child{
-            transform: translateX(40px);
-            color:white;
-        }
-    
-
-        :hover{
-           
-            ::before{
-                display:block;
-            }
-                a.a_child{
-                    transform: translateX(40px);
-                    color:white;
-                }
-
-                i{
-                    right: 0;
-                    color:white;
-                }
-                .sub{
-                    display: block !important;
-                }
-            }
-    }
-     
-`
-
-const Submenu = styled.ul`
-    position: absolute;
-    background: #151515;
-    border: 1px #303030;
-    border-top: 2px solid #aceb2f;
-    border-radius: 3px;
-    box-sizing: border-box;
-    padding: 0;
-    text-aglin: left;
-    top: 0;
-    left:-109%;
-    width: 235px;
-    padding: 20px 0 0 20px  !important;
-    height:auto !important;
-    display:none !important;
-
-    &.right{
-        li{
-            :hover{
-               
-                   
-                    a.a_sub{
-                        transform: translateX(-40px);
-                        color:white;
-                    }
-        
-                    i{
-                        right: 100%;
-                        color:white;
-                    }
-                    
-                }
-        }
-        }
-    }
-
-    li{
-        a.a_sub{
-            color:#989898!important;
-            display:inline-block;
-        }
-    
-    
-        :hover{
-               
-            ::before{
-                display:block;
-            }
-               
-                a.a_sub{
-                    transform: translateX(40px);
-                    color:white;
-                }
-    
-                i{
-                    right: 0;
-                    color:white;
-                }
-                .sub{
-                    display: block !important;
-                }
-            }
-    }
-    }
-`
- */
 const Nav_e = styled.div`
 
     position: absolute;
@@ -462,9 +279,11 @@ const Nav_e = styled.div`
     box-sizing: border-box;
     padding: 0;
     top: 100%;
-    right:-390%;
+    /* right: -527%; */
+    left: 50%;
     width: 100vw;
-    display:none;
+    display: none;
+    transform: translateX(-69%);
 
     .box_e{
         width: 100%;

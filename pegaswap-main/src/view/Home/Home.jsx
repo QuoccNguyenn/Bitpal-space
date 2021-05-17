@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import Team from '../../components/Team/Team'
 import "slick-carousel/slick/slick.css";
@@ -21,6 +21,18 @@ import ScrollButton from '../../components/ButtonScroll/ScrollButton';
 
 
 const Home = ({title}) => {
+
+  const[Cir,setCir]= useState(false);
+
+  const runCir=() =>{
+    console.log(window.scrollY);
+    if(window.scrollY>1550){
+        setCir(true)
+    }
+  }
+
+  window.addEventListener('scroll',runCir);
+
   return (
     <Box_home>
         <WrapperHome>
@@ -29,7 +41,7 @@ const Home = ({title}) => {
             <Header></Header>
             <Introduce></Introduce>
             <About></About>
-            <Token></Token>
+            <Token run_Cir={Cir}></Token>
 
           {/* A. nguyen */}
 

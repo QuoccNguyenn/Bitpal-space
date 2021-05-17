@@ -71,7 +71,10 @@ const Header=() =>{
                                             <span className="tl">Reached: $19,550,000</span>
                                             <span className="tr">$70,000,000</span>
                                         </div>
-                                        <Progress className="clear" value={30} />
+                                        <Progress className="clear" value={30}>
+                                            <Colorpr className="demo"></Colorpr>
+                                        </Progress>
+
                                         <div className="text_pro">
                                             <span className="tl">Softcap</span>
                                             <span className="tr">Hardcap</span>
@@ -348,12 +351,31 @@ const Box_right = styled.div`
             }
 
             .progress-bar{
-                background-color:#aceb2f;
+                position:relative;
+                background:transparent;
             }
         }
 
 
     }
+`
+
+const Colorpr = styled.div`
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #aceb2f;
+    &.demo{
+        animation: run  5s;
+    }
+
+@keyframes run {
+    from {width:0;}
+    to {width: 100%;}
+  }
 `
 
 
