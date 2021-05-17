@@ -22,8 +22,13 @@ body{
 
 .modal-content{
   width: 50% !important;
-  background:transparent
+  background: transparent !important;
 }
+
+iframe {
+  border: transparent !important;
+}
+
 body.dark-mode{
   /* background: #191326!important; */
   background: radial-gradient(circle, rgba(17,17,71,1) 0%, rgba(11,12,69,1) 22%, rgba(11,36,55,1) 100%)!important;

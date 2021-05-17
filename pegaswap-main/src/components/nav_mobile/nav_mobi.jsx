@@ -1,5 +1,8 @@
 import react, { useState } from 'react'
 import styled from 'styled-components'
+import { ProSidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
+import 'react-pro-sidebar/dist/css/styles.css';
+
 import Child_mb from './child_menu_mb/Child_mb';
 
 
@@ -133,7 +136,93 @@ const Nav_Mobi =()=>{
                     <a href="#"><img src="images/logo.png" alt="" /></a>
                 </div>
 
-                <Menu>
+                <ProSidebar>
+                <Menu iconShape="square">
+                    <MenuItem >Dashboard</MenuItem>
+
+                    <SubMenu title="HOME">
+                    {child_home.map((chl,idx)=>(
+                        <MenuItem key={idx}>{chl}</MenuItem>
+                    ))}
+                    {/* {child_home.filter(chl => typeof(chl) =="object").map((chl,idx)=>(
+                        <MenuItem>{chl}</MenuItem>
+                    ))} */}
+                    </SubMenu>
+
+                    <SubMenu title="PAGES">
+                    {child_pages.map((chl,idx)=>(
+                        <MenuItem key={idx}>{chl}</MenuItem>
+                    ))}
+                    </SubMenu>
+
+                    <SubMenu title="CURRENCIES">
+                        {child_Curent.map((chl,idx)=>(
+                            <MenuItem key={idx}>{chl}</MenuItem>
+                        ))}
+                    </SubMenu>
+
+                     <SubMenu title="PORTFOLIO">
+                         
+                        {child_pf.filter(chl=>chl.Subchild==0).map((chl,idx)=>(
+                            <MenuItem>{chl.name}</MenuItem>
+                        ))}
+
+                        {child_pf.filter(chl=>chl.Subchild==1).map((chl,idx)=>(
+                            <SubMenu  title={`${chl.name}`}>
+                                {chl.sub.map((chl,idx)=>(
+                                    <MenuItem key={idx}>{chl}</MenuItem>
+                                ))}
+                            </SubMenu>
+                        ))}
+                    </SubMenu>
+
+                    <SubMenu title="BLOG">
+                      
+                        {child_blog.filter(chl=>chl.Subchild==0).map((chl,idx)=>(
+                                <MenuItem>{chl.name}</MenuItem>
+                            ))}
+
+                            {child_blog.filter(chl=>chl.Subchild==1).map((chl,idx)=>(
+                                <SubMenu  title={`${chl.name}`}>
+                                    {chl.sub.map((chl,idx)=>(
+                                        <MenuItem key={idx}>{chl}</MenuItem>
+                                    ))}
+                                </SubMenu>
+                            ))}
+
+                    </SubMenu>   
+
+                    <SubMenu title="SHOP">
+                      
+                        {child_shop.filter(chl=>chl.Subchild==0).map((chl,idx)=>(
+                                <MenuItem>{chl.name}</MenuItem>
+                            ))}
+
+                            {child_shop.filter(chl=>chl.Subchild==1).map((chl,idx)=>(
+                                <SubMenu  title={`${chl.name}`}>
+                                    {chl.sub.map((chl,idx)=>(
+                                        <MenuItem key={idx}>{chl}</MenuItem>
+                                    ))}
+                                </SubMenu>
+                            ))}
+                            
+                    </SubMenu>   
+
+                    <SubMenu title="ELEMENT">
+                      
+                          {child_E.map((chl,idx)=>(
+                              <SubMenu  title={`${chl.title}`}>
+                                  {chl.arr.map((chl,idx)=>(
+                                      <MenuItem key={idx}>{chl}</MenuItem>
+                                  ))}
+                              </SubMenu>
+                          ))}
+                          
+                  </SubMenu>  
+                </Menu>
+            </ProSidebar>;
+
+               {/*  <Menu>
                             <li onClick={() => {HandleClickSub()}} className="active"><a href="">HOME</a><Child_mb child_arr ={child_home}></Child_mb> <i class="fas fa-arrow-right"></i></li>
 
                             <li onClick={() => {HandleClickSub()}} ><a href="">PAGES</a><Child_mb child_arr ={child_pages}  ></Child_mb> <i class="fas fa-arrow-right"></i></li>
@@ -145,7 +234,7 @@ const Nav_Mobi =()=>{
                             <li onClick={() => {HandleClickSub()}}><a href="">BLOG</a><Child_mb child_arr ={child_blog} ></Child_mb> <i class="fas fa-arrow-right"></i></li>
 
                             <li onClick={() => {HandleClickSub()}}><a href="">SHOP</a><Child_mb child_arr ={child_shop}></Child_mb> <i class="fas fa-arrow-right"></i></li>
-                </Menu>
+                </Menu> */}
             </Box_menu>
             <Bg_out onClick={() => SetHiden(false)}></Bg_out>
         </Nav_menu>
@@ -264,6 +353,58 @@ const Nav_menu = styled.div`
                     }
                 }
     }
+
+    .pro-sidebar{
+        width: 100%;
+        height:590px;
+        
+        .pro-sidebar-inner{
+            background:transparent;
+        }
+
+        li.pro-menu-item.pro-sub-menu.open {
+            border-top: 2px solid #aceb2f;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        .pro-menu .pro-menu-item > .pro-inner-item{
+            :hover{
+                :before {
+                    content: '';
+                    display: inline-block;
+                    width: 6px;
+                    min-width: 4px;
+                    height: 6px;
+                    border: 1px solid #aceb2f;
+                    background: #aceb2f;
+                    border-radius: 50%;
+                    margin-right: 15px;
+                    position: relative;
+                    box-shadow: 1px 0px 0px #adadad, 0px -1px 0px #adadad, 0px 1px 0px #adadad, -1px 0px 0px #adadad;
+                }
+            }
+        }
+
+        .pro-sidebar-inner > .pro-sidebar-layout{
+            /* width */
+            ::-webkit-scrollbar {
+            width: 5px;
+            }
+        
+            /* Track */
+            ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px grey; 
+            border-radius: 10px;
+            }
+            
+            /* Handle */
+            ::-webkit-scrollbar-thumb {
+            background: white; 
+            border-radius: 10px;
+            }
+        }
+    }
 `
 
 const Box_menu = styled.div`
@@ -281,7 +422,7 @@ const Box_menu = styled.div`
     }
 `
 
-const Menu = styled.ul`
+/* const Menu = styled.ul`
     padding: 0;
     list-style: none;
     padding: 0;
@@ -360,7 +501,7 @@ const Menu = styled.ul`
         }
     }
 `
-
+ */
 const Bg_out = styled.div`
     flex-grow: 3;
     background: gray;

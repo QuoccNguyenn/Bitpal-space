@@ -50,12 +50,12 @@ return(
                             <img src="https://bitpal.qodeinteractive.com/wp-content/uploads/2018/07/h1-img-1.png" alt="" />
                         </div>
                         
-                        <a href="#"  onClick={toggle}>
+                        <a onClick={toggle}>
                                 <span></span>
                         </a>
 
                         <Modal isOpen={modal} fade={false} toggle={toggle} className="as" style={{maxWidth: '100vw', width: '100%',height:"100vh",margin:"0px",display:"flex", justifyContent: "center",alignItems:"center"}}>
-                        <ModalBody className="modal-video"  style={{width: '100%' ,padding:"0px"}}>
+                        <ModalBody className="modal-video"  style={{width: '100%',height:"60vh" ,padding:"0px"}}>
                         <Iframe url="https://player.vimeo.com/video/267777924?title=0&byline=0&portrait=0&autoplay=1;"
                             width="100%"
                             height="100%"

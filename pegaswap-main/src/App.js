@@ -4,6 +4,7 @@ import NavBar from './components/nav/nav';
 import Home from './view/Home/Home';
 import Marquee from "react-fast-marquee";
 import Nav_Mobi from './components/nav_mobile/nav_mobi';
+import Slide_T from './components/slide_top/slide_top';
 
 const App = () => {
 
@@ -15,8 +16,8 @@ const App = () => {
             <div className="item-line"></div>
             <div className="item-line"></div>
         </Boxline>
-          <Marquee >
-            asdkljasdlkjasdjaklsdjalksj
+          <Marquee gradientColor="[]" pauseOnHover="true" className="slide_top">
+            <Slide_T></Slide_T>
         </Marquee>
           <NavBar></NavBar>
           <Nav_Mobi></Nav_Mobi>
@@ -47,7 +48,8 @@ const Box_app = styled.div`
 
   .slide_top{
     width:100%;
-    height
+    height:44px;
+    background:black;
   }
 `
 const  Boxline = styled.div`

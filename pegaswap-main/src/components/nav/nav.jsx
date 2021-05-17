@@ -153,7 +153,6 @@ const NavBar=()=>{
 const Box_nav= styled.nav`
     padding:0;
     position:absolute;
-    top:0;
     left:0;
     right:0;
     z-index:9999999;
