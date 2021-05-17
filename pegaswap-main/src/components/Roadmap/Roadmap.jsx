@@ -8,16 +8,23 @@ function Roadmap() {
             arrow: true,
             infinite: false,
             speed: 400,
-            slidesToShow: 4,
+            slidesToShow: 5,
             slidesToScroll: 1,
             responsive: [
-              {
-                breakpoint: 480,
-                settings: {
-                  slidesToShow: 1,
-                  slidesToScroll: 1
+                {
+                    breakpoint: 1024,
+                    settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                    }
                 }
-              }
             ]
         };
 
@@ -277,6 +284,13 @@ const RoadmapSection = styled.section`
         }
         .slick-next{
             right: 10px;
+        }
+    }
+
+    @media screen and (max-width: 375px){
+
+        .slick-prev, .slick-next {
+            top: -2.5px;
         }
     }
 

@@ -204,6 +204,10 @@ const BodyContainer = styled.div`
     }
 
     @media screen and (max-width: 768px){
+        justify-content: flex-start;
+    }
+
+    @media screen and (max-width: 415px){
         justify-content: center;
     }
 `

@@ -246,8 +246,8 @@ const ButtonOutter = styled.a`
         width: 225%;
         height: 562.5px;
     }
-    :active {
-        background-color: #fff;
+    @media screen and (max-width: 568px){
+        width: 40%;
     }
     @media screen and (max-width: 415px){
         margin: 1rem auto;

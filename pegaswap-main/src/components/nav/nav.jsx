@@ -254,8 +254,11 @@ const Contents_nav = styled.div`
 const Btn_menu = styled.div`
     height: 100%;
     flex-grow:2;
-    .btn{
-        width:70%;
+    div{
+        a{
+            margin: 1.6rem auto;
+            padding: 10px 25px;
+        }
     }
 `
 
