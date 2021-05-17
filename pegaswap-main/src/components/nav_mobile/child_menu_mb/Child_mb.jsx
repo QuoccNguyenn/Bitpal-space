@@ -30,22 +30,19 @@ const Child_mb = (props) =>{
 }
 
 const Box_child = styled.ul`
-    position: absolute;
     background: #151515;
     border: 1px #303030;
     border-top: 2px solid #aceb2f;
     border-radius: 3px;
     box-sizing: border-box;
     padding: 0;
-    top: 0;
-    width: 255px;
     padding: 20px 0 0 20px  !important;
     height: auto !important;
-    left: 100%;
     background: #151515;
     z-index: 2;
     list-style: none;
     display:none;
+    transition: all .5s;
 
     li{
         cursor: pointer;

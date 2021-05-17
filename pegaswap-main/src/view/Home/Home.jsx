@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Team from '../../components/Team/Team'
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import OurTeam from '../../components/OurTeam/OurTeam';
 import Feature from '../../components/Feature/Feature';
@@ -29,7 +29,7 @@ const Home = ({title}) => {
             <Header></Header>
             <Introduce></Introduce>
             <About></About>
-            <Token></Token> 
+            <Token></Token>
 
           {/* A. nguyen */}
 
@@ -60,7 +60,7 @@ const Home = ({title}) => {
   )
 }
 
-const Box_home = styled.section`  
+const Box_home = styled.section`
   width:100%;
   overflow:hidden;
 `

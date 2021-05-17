@@ -95,12 +95,21 @@ const Nav_Mobi =()=>{
     const[child_E,Setchild_E]= useState(arrE);
 
     const[hiden,SetHiden] = useState(false);
+    const[hidenSub,SetHidenSub] = useState(false);
 
     const HandleClickMenu=() =>{
         if(hiden){
             SetHiden(false);
         }else{
             SetHiden(true);
+        }
+    }
+
+    const HandleClickSub=() =>{
+        if(hidenSub){
+            SetHidenSub(false);
+        }else{
+            SetHidenSub(true);
         }
     }
 
@@ -125,17 +134,17 @@ const Nav_Mobi =()=>{
                 </div>
 
                 <Menu>
-                            <li className="active"><a href="">HOME</a><Child_mb child_arr ={child_home}></Child_mb> <i class="fas fa-arrow-right"></i></li>
+                            <li onClick={() => {HandleClickSub()}} className="active"><a href="">HOME</a><Child_mb child_arr ={child_home}></Child_mb> <i class="fas fa-arrow-right"></i></li>
 
-                            <li ><a href="">PAGES</a><Child_mb child_arr ={child_pages}  ></Child_mb> <i class="fas fa-arrow-right"></i></li>
+                            <li onClick={() => {HandleClickSub()}} ><a href="">PAGES</a><Child_mb child_arr ={child_pages}  ></Child_mb> <i class="fas fa-arrow-right"></i></li>
 
-                            <li ><a href="">CURRENCIES</a><Child_mb child_arr ={child_Curent}  ></Child_mb> <i class="fas fa-arrow-right"></i></li>
+                            <li onClick={() => {HandleClickSub()}} ><a href="">CURRENCIES</a><Child_mb child_arr ={child_Curent}  ></Child_mb> <i class="fas fa-arrow-right"></i></li>
 
-                            <li><a href="">PORTFOLIO</a><Child_mb child_arr ={child_pf}  ></Child_mb> <i class="fas fa-arrow-right"></i></li>
+                            <li onClick={() => {HandleClickSub()}}><a href="">PORTFOLIO</a><Child_mb child_arr ={child_pf}  ></Child_mb> <i class="fas fa-arrow-right"></i></li>
 
-                            <li><a href="">BLOG</a><Child_mb child_arr ={child_blog} ></Child_mb> <i class="fas fa-arrow-right"></i></li>
+                            <li onClick={() => {HandleClickSub()}}><a href="">BLOG</a><Child_mb child_arr ={child_blog} ></Child_mb> <i class="fas fa-arrow-right"></i></li>
 
-                            <li><a href="">SHOP</a><Child_mb child_arr ={child_shop}></Child_mb> <i class="fas fa-arrow-right"></i></li>
+                            <li onClick={() => {HandleClickSub()}}><a href="">SHOP</a><Child_mb child_arr ={child_shop}></Child_mb> <i class="fas fa-arrow-right"></i></li>
                 </Menu>
             </Box_menu>
             <Bg_out onClick={() => SetHiden(false)}></Bg_out>
@@ -243,6 +252,17 @@ const Nav_menu = styled.div`
 
     &.show{
         display:flex;
+
+        animation: Show 1s;
+
+                @keyframes Show{
+                    from{
+                        opacity:.4;
+                    }
+                    to{
+                        opacity:1;
+                    }
+                }
     }
 `
 
@@ -264,7 +284,12 @@ const Box_menu = styled.div`
 const Menu = styled.ul`
     padding: 0;
     list-style: none;
-    
+    padding: 0;
+    list-style: none;
+    height: 580px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
     li.active{
         a{
             color:#ffffff
@@ -304,7 +329,20 @@ const Menu = styled.ul`
             }
 
             .child{
+                opacity:1;
                 display:block;
+                animation: sub 1s;
+
+                @keyframes sub{
+                    from{
+                        opacity:.4;
+                        transform: translateX(-50%);
+                    }
+                    to{
+                        opacity:1;
+                        transform: translateX(0px);
+                    }
+                }
             }
         }
 

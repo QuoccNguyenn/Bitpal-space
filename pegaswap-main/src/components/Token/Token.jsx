@@ -91,7 +91,7 @@ import Button from '../Buttons/Button';
                             <Circle>
 
                                 {item.map((it,idx)=>(
-                                    <div key={idx} className={ demo==idx ?"item active":"item "} onMouseOver={()=>add_active(idx)}>
+                                    <div key={idx} className={ demo==idx ?"item active":"item"} onMouseOver={()=>add_active(idx)}>
                                     <div className={`item-circle ${it.class_it}`}>
                                         <span className="img"><img src={`images/${it.img}`} alt="" /></span>
                                         <span className="img-hv"><img src={`images/${it.img_hv}`} alt="" /></span>
@@ -127,6 +127,10 @@ import Button from '../Buttons/Button';
         const Box_tk = styled.section`
             width:100%;
             padding:7.5rem 0;
+
+            @media screen and (max-width:600px){
+                padding:1.5rem 0 ;
+            }
         `
 
         const Content_tk = styled.div`
@@ -141,7 +145,6 @@ import Button from '../Buttons/Button';
         `
         const Box_left_tk = styled.div`
             width:100%;
-            height: 500px;
             display:flex;
             flex-direction:row;
             justify-content:center;
@@ -161,11 +164,17 @@ import Button from '../Buttons/Button';
                 height:400px;
             }
 
-            .item:hover{
-                .text-circle{
-                    display:block;
-                }
-            } 
+            @media screen and (max-width: 415px){
+
+                width:300px;
+                height:300px;
+            }
+
+            @media screen and (max-width: 350px){
+                width:250px;
+                height:250px;
+            }
+
 
             .item.active {
                 
@@ -192,13 +201,19 @@ import Button from '../Buttons/Button';
                     p{
                         font-size:16px;
                         color: #888;
+                        text-align: center;
+                        margin: 0;
+                        width: 100%;
 
                         @media screen and (max-width:600px){
-                            font-size: 13px;
-                            color: #888;
-                            text-align: center;
-                            margin: 0;
-                            width: 100%;
+                            display:none;
+
+                        }
+                    }
+
+                    @media screen and (max-width:415px){
+                        h4{
+                            font-size:18px;
                         }
                     }
                 }
@@ -236,8 +251,38 @@ import Button from '../Buttons/Button';
                     line-height:100px;
                 }
 
+                @media screen and (max-width: 415px){
+
+                    width:50px;
+                    height:50px;
+                    line-height:50px;
+                }
+
+                .img{
+                    display:block;
+
+                    img{
+                        max-width: 50px;
+                        width: 100%;
+                        object-fit: cover;
+                        @media screen and (max-width:415px){
+                            max-width: 25px;
+                        }
+                    }
+                }
+
                 .img-hv{
                     display: none;
+
+                    img{
+                        max-width: 50px;
+                        width: 100%;
+                        object-fit: cover;
+
+                        @media screen and (max-width:415px){
+                            max-width: 25px;
+                        }
+                    }
                 }
                 
 
@@ -320,9 +365,14 @@ import Button from '../Buttons/Button';
 
         const Box_right_tk = styled.div`
             width:100%;
+            position:relative;
 
             @media screen and (max-width:1024px){
                 padding: 7.5rem 0;
+            } 
+            
+            @media screen and (max-width:600px){
+                padding: 4.5rem 0;
             }
 
             .text_right{
@@ -333,12 +383,11 @@ import Button from '../Buttons/Button';
 
                 @media screen and (max-width: 1024px){
                     width: 80%;
-                    text-align: center;
                     padding-left:0;
                     margin: 0 auto;
-
-
                 }
+
+
                 h1{
                     color:white;
                     font-weight:600;
@@ -369,7 +418,7 @@ import Button from '../Buttons/Button';
                 }
 
                     .btn{
-            
+                        padding:0;
                         a{
                             display:block;
                             text-decoration:none;

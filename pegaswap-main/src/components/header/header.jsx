@@ -21,20 +21,20 @@ const Header=() =>{
                         <div className="col-xl-6">
                             <Left_content>
                                 <div className="text_content"> First Mining ICO Token StartUp</div>
-                                <p>Regarded as a synonym to cryptocurrency, blockchain is much more than a payment option.</p>  
+                                <p>Regarded as a synonym to cryptocurrency, blockchain is much more than a payment option.</p>
                                 <div className="box_btn">
                                     <div className="btn">
                                         <Button name='WHITE PAPER'/>
                                     </div>
-                                    
-                                    
+
+
 
                                     <div className="btn">
                                         <Button name='FIND OUT MORE'/>
                                     </div>
-                                </div>  
-                            </Left_content>    
-                           
+                                </div>
+                            </Left_content>
+
                         </div>
                         <div className="col-xl-6">
                             <Right_content>
@@ -77,9 +77,9 @@ const Header=() =>{
                                             <span className="tr">Hardcap</span>
                                         </div>
                                     </div>
-                                   
+
                                 </Box_right>
-                            </Right_content>    
+                            </Right_content>
                         </div>
                     </div>
                 </div>
@@ -116,11 +116,11 @@ const BannerLetter = styled.span`
     letter-spacing: 10px;
     line-height: normal;
 `
-const Content_hd = styled.div`  
+const Content_hd = styled.div`
     padding:10.5rem 0;
     @media screen and (max-width: 415px){
         padding:5.5rem 0;
-        
+
     }
 `
 
@@ -146,13 +146,17 @@ const Left_content = styled.div`
         letter-spacing:3px;
         color:white;
         padding:15px 0;
-        
+
         @media screen and (max-width:768px){
             font-size: 55px;
         }
 
         @media screen and (max-width:415px){
             font-size: 35px;
+        }
+
+        @media screen and (max-width:380px){
+            font-size: 25px;
         }
     }
     p{
@@ -171,6 +175,30 @@ const Left_content = styled.div`
         @media screen and (max-width:415px){
             font-size: 12px;
             margin: 10px 0;
+        }
+    }
+
+    .box_btn{
+        .btn{
+            padding:10px 10px 0 0 ;
+            a{
+                display:block;
+                text-decoration:none;
+                color:white;
+                font-family: 'Montserrat', sans-serif;
+                font-weight:600;
+                padding:15px 25px;
+                border-radius:50px;
+                border:2px solid #aceb2f;
+                font-size:14px;
+
+                @media screen and (max-width:415px){
+                    padding: 10px 15px;
+                    font-size: 10px;
+                }
+            }
+
+
         }
     }
 `
@@ -195,7 +223,7 @@ const Box_right = styled.div`
     margin:0 auto;
     padding:45px 40px;
     border-radius: 10px;
-    
+
     .title_box{
         color:#aceb2f;
         font-size: 24px;
@@ -227,11 +255,11 @@ const Box_right = styled.div`
 
         @media screen and (max-width: 768px){
             width:40%;
-            
+
         }
 
-        
-       
+
+
     }
 
     .num_time{
@@ -261,6 +289,21 @@ const Box_right = styled.div`
 
     .btn{
         width:100%;
+        a{
+            display:block;
+            text-decoration:none;
+            color:white;
+            font-family: 'Montserrat', sans-serif;
+            font-weight:600;
+            padding:15px 25px;
+            border-radius:50px;
+            border:2px solid #aceb2f;
+            font-size:14px;
+
+            @media screen and (max-width:415px){
+                padding: 10px 15px;
+                font-size: 10px;
+            }
         }
     }
     .box_pro{
@@ -276,7 +319,7 @@ const Box_right = styled.div`
                 &.tl{
                     text-align:left;
                 }
-                
+
                 &.tr{
                     text-align:right;
                 }
@@ -299,7 +342,7 @@ const Box_right = styled.div`
             background:black;
             height:13px;
             border-radius:20px;
-            
+
             @media screen and (max-width:600px){
                 height: 7px;
             }
@@ -309,7 +352,7 @@ const Box_right = styled.div`
             }
         }
 
-       
+
     }
 `
 
