@@ -2,12 +2,21 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import {  Modal,  ModalBody } from 'reactstrap';
 import Iframe from 'react-iframe'
+import Content_box from '../content_box/content_box';
 
+const arr_content={
+    h1:"About",
+    h5:"Aliquam lorem ante, dapibus in, viverra quis, feugiat tellus. Phasellus viverra nulla ut metus varius laore.",
+    p:`About Aliquam lorem ante, dapibus in, viverra quis, feugiat tellus. Phasellus viverra nulla ut metus varius laore.
+    Lorem ipsum dolor sit amet, consetuer adipiscing elit. Aenean com modo ligula eget dolor. Aenean massa. Cum sociis
+    Theme natoque penatibus etmagnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit consectetuer 
+    adipiscing sociis theme`
+}
 
 const About = () =>{
     const [modal, setModal] = useState(false);
       const toggle = () => setModal(!modal);
-
+    const[content_box,SetContentBox] = useState(arr_content);
 
 return(
     <Box_ab>
@@ -21,14 +30,9 @@ return(
         <div className="container">
             <div className="row">
                 <Ab_left className="col-xl-5">
-                    <div className="text_left">
-                        <h1>About</h1>
-                        <h5>Aliquam lorem ante, dapibus in, viverra quis, feugiat tellus. Phasellus viverra nulla ut metus varius laore.</h5>
-                        <p>About Aliquam lorem ante, dapibus in, viverra quis, feugiat tellus. Phasellus viverra nulla ut metus varius laore.
-                            Lorem ipsum dolor sit amet, consetuer adipiscing elit. Aenean com modo ligula eget dolor. Aenean massa. Cum sociis
-                            Theme natoque penatibus etmagnis dis parturient montes, <span>nascetur ridiculus</span> mus. Lorem ipsum dolor sit consectetuer 
-                            adipiscing <span>sociis theme</span></p>
-                    </div>
+                    <Text_left>
+                        <Content_box content={content_box}></Content_box>
+                    </Text_left>
 
                     <List_ab>
                         <ul>
@@ -37,9 +41,9 @@ return(
                             <li><span>Financial Services</span></li>
                         </ul>
                         <ul>
-                        <li><span>Financial Services</span></li>
-                        <li><span>Blockchain Strategy</span></li>
-                        <li><span>ICO Progress</span></li>
+                            <li><span>Financial Services</span></li>
+                            <li><span>Blockchain Strategy</span></li>
+                            <li><span>ICO Progress</span></li>
                         </ul>
                     </List_ab>
                     
@@ -75,6 +79,10 @@ const Box_ab = styled.section`
     overflow:hidden;
     padding:7.5rem 0;
     position: relative;
+
+    .row{
+        align-items:center;
+    }
 `
 const BannerTeam = styled.div`
     position: absolute;
@@ -109,42 +117,11 @@ const Ab_left = styled.div`
         margin: 0 auto;
     }
 
-    .text_left{
-        text-align:left;    
-        padding-bottom:28px;
-        h1{
-            color:white;
-            font-weight:600;
-            font-family: 'Montserrat', sans-serif;
-        }
+`
 
-        h5{
-            color: #ffffff;
-            font-size: 18px;
-            font-style: italic;
-            font-weight: 400;
-            line-height: 35px;
-            margin: 11px 0 0 0;
-            font-family: 'Roboto', sans-serif;
-        }
-
-        p{
-            text-align: left;
-            display: block;
-            margin: 14px 0 0;
-            font-family: "Open Sans",sans-serif;
-            line-height: 26px;
-            font-weight: 400;
-            margin-top: 28px;
-            color: #888;
-
-            span{
-                color: #d4d4d4;
-            }
-        }
-
-    }
-
+const Text_left = styled.div`
+    text-align:left;    
+    padding-bottom:28px;
 `
 const List_ab = styled.div`
     width:100%;
@@ -157,6 +134,7 @@ const List_ab = styled.div`
             margin:0;
         }
     }
+
     ul{
         
         width:100%;

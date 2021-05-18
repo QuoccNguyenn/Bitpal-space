@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import { ProSidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
 import 'react-pro-sidebar/dist/css/styles.css';
 
-import Child_mb from './child_menu_mb/Child_mb';
 
 
 const arrHome = ["MAIN HOME","APP PRESENTATION","CRYPTO ADVISOR","CRYPTO AGENCY","ICO HOME","BLOCKCHAIN APP","VERTICAL SLIDER","BLOG HOME","LANDING"];
@@ -144,9 +143,6 @@ const Nav_Mobi =()=>{
                     {child_home.map((chl,idx)=>(
                         <MenuItem key={idx}>{chl}</MenuItem>
                     ))}
-                    {/* {child_home.filter(chl => typeof(chl) =="object").map((chl,idx)=>(
-                        <MenuItem>{chl}</MenuItem>
-                    ))} */}
                     </SubMenu>
 
                     <SubMenu title="PAGES">
@@ -222,19 +218,6 @@ const Nav_Mobi =()=>{
                 </Menu>
             </ProSidebar>;
 
-               {/*  <Menu>
-                            <li onClick={() => {HandleClickSub()}} className="active"><a href="">HOME</a><Child_mb child_arr ={child_home}></Child_mb> <i class="fas fa-arrow-right"></i></li>
-
-                            <li onClick={() => {HandleClickSub()}} ><a href="">PAGES</a><Child_mb child_arr ={child_pages}  ></Child_mb> <i class="fas fa-arrow-right"></i></li>
-
-                            <li onClick={() => {HandleClickSub()}} ><a href="">CURRENCIES</a><Child_mb child_arr ={child_Curent}  ></Child_mb> <i class="fas fa-arrow-right"></i></li>
-
-                            <li onClick={() => {HandleClickSub()}}><a href="">PORTFOLIO</a><Child_mb child_arr ={child_pf}  ></Child_mb> <i class="fas fa-arrow-right"></i></li>
-
-                            <li onClick={() => {HandleClickSub()}}><a href="">BLOG</a><Child_mb child_arr ={child_blog} ></Child_mb> <i class="fas fa-arrow-right"></i></li>
-
-                            <li onClick={() => {HandleClickSub()}}><a href="">SHOP</a><Child_mb child_arr ={child_shop}></Child_mb> <i class="fas fa-arrow-right"></i></li>
-                </Menu> */}
             </Box_menu>
             <Bg_out onClick={() => SetHiden(false)}></Bg_out>
         </Nav_menu>
@@ -357,7 +340,7 @@ const Nav_menu = styled.div`
     .pro-sidebar{
         width: 100%;
         height:590px;
-        
+
         .pro-sidebar .pro-menu .pro-menu-item {
             font-size: 15px;
             line-height: 40px;
@@ -426,87 +409,6 @@ const Box_menu = styled.div`
         }
     }
 `
-
-/* const Menu = styled.ul`
-    padding: 0;
-    list-style: none;
-    padding: 0;
-    list-style: none;
-    height: 580px;
-    overflow-y: scroll;
-    overflow-x: hidden;
-
-    li.active{
-        a{
-            color:#ffffff
-        }
-        ::before{
-            background: rgb(172, 235, 47);
-        }
-    }
-
-    li{
-        padding: 5px 0;
-        padding-left:20px;
-        line-height: 70px;
-        position:relative;
-
-        ::before{
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 1px;
-            background: #888;
-        }
-
-        :hover{
-            a{
-                color:#ffffff
-            }
-            ::before{
-                background: rgb(172, 235, 47);
-            }
-
-            i{
-                right: 10px;
-                color:white;
-            }
-
-            .child{
-                opacity:1;
-                display:block;
-                animation: sub 1s;
-
-                @keyframes sub{
-                    from{
-                        opacity:.4;
-                        transform: translateX(-50%);
-                    }
-                    to{
-                        opacity:1;
-                        transform: translateX(0px);
-                    }
-                }
-            }
-        }
-
-        a{
-            color:#888;
-            text-decoration:none;
-        }
-
-        i{
-            position: absolute;
-            right: 40px;
-            top: 50%;
-            transform: translateY(-50%);
-            transition: all .5s;
-        }
-    }
-`
- */
 const Bg_out = styled.div`
     flex-grow: 3;
     background: gray;

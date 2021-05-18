@@ -20,66 +20,66 @@ const Header=() =>{
                     <div className="row">
                         <div className="col-xl-6">
                             <Left_content>
-                                <div className="text_content"> First Mining ICO Token StartUp</div>
-                                <p>Regarded as a synonym to cryptocurrency, blockchain is much more than a payment option.</p>
+                                <Text_content> First Mining ICO Token StartUp</Text_content>
+                                <Content_p>Regarded as a synonym to cryptocurrency, blockchain is much more than a payment option.</Content_p>
+                               
                                 <div className="box_btn">
                                     <div className="btn">
                                         <Button name='WHITE PAPER'/>
                                     </div>
 
-
-
                                     <div className="btn">
                                         <Button name='FIND OUT MORE'/>
                                     </div>
                                 </div>
+                                
                             </Left_content>
 
                         </div>
                         <div className="col-xl-6">
                             <Right_content>
                                 <Box_right>
-                                    <div className="title_box">Edge ICO Ends in</div>
-                                    <div className="box_time">
-                                        <div className="item_time">
-                                            <div className="num_time">00</div>
-                                            <div className="text_time">Days</div>
-                                        </div>
+                                    <Title_box>Edge ICO Ends in</Title_box>
+                                    <Box_time>
+                                        <Item_Time>
+                                            <Num_time>00</Num_time>
+                                            <Text_time>Days</Text_time>
+                                        </Item_Time>
 
-                                        <div className="item_time">
-                                            <div className="num_time">00</div>
-                                            <div className="text_time">Hours</div>
-                                        </div>
+                                        <Item_Time>
+                                            <Num_time>00</Num_time>
+                                            <Text_time>Hours</Text_time>
+                                        </Item_Time>
 
-                                        <div className="item_time">
-                                            <div className="num_time">00</div>
-                                            <div className="text_time">Minutes</div>
-                                        </div>
+                                        <Item_Time>
+                                            <Num_time>00</Num_time>
+                                            <Text_time>Minutes</Text_time>
+                                        </Item_Time>
 
-                                        <div className="item_time">
-                                            <div className="num_time">00</div>
-                                            <div className="text_time">Seconds</div>
-                                        </div>
-                                    </div>
+                                        <Item_Time>
+                                            <Num_time>00</Num_time>
+                                            <Text_time>Seconds</Text_time>
+                                        </Item_Time>
+                                    </Box_time>
                                     <div className="btn">
                                         <Button  name='Buy Edge Tokens'/>
                                     </div>
 
 
-                                    <div className="box_pro">
-                                        <div className="text_pro">
+                                    <Box_pro>
+                                        <Text_pro>
                                             <span className="tl">Reached: $19,550,000</span>
                                             <span className="tr">$70,000,000</span>
-                                        </div>
+                                        </Text_pro>
                                         <Progress className="clear" value={30}>
                                             <Colorpr className="demo"></Colorpr>
                                         </Progress>
 
-                                        <div className="text_pro">
+                                        <Text_pro>
                                             <span className="tl">Softcap</span>
                                             <span className="tr">Hardcap</span>
-                                        </div>
-                                    </div>
+                                        </Text_pro>
+                                    </Box_pro>
 
                                 </Box_right>
                             </Right_content>
@@ -140,71 +140,49 @@ const Left_content = styled.div`
     }
 
 
+`
 
-    .text_content{
-        max-width:100%;
-        font-size:75px;
-        font-family: 'Roboto', sans-serif;
-        font-weight:bold;
-        letter-spacing:3px;
-        color:white;
-        padding:15px 0;
+const Text_content = styled.div`
+    max-width:100%;
+    font-size:75px;
+    font-family: 'Roboto', sans-serif;
+    font-weight:bold;
+    letter-spacing:3px;
+    color:white;
+    padding:15px 0;
 
-        @media screen and (max-width:768px){
-            font-size: 55px;
-        }
-
-        @media screen and (max-width:415px){
-            font-size: 35px;
-        }
-
-        @media screen and (max-width:380px){
-            font-size: 25px;
-        }
-    }
-    p{
-        max-width:100%;
-        color: #ffffff;
-        font-size: 22px;
-        font-weight: 400;
-        line-height: 35px;
-        margin: 19px 0 40px 0;
-        font-family: 'Montserrat', sans-serif;
-
-        @media screen and (max-width:768px){
-            font-size: 18px;
-        }
-
-        @media screen and (max-width:415px){
-            font-size: 12px;
-            margin: 10px 0;
-        }
+    @media screen and (max-width:768px){
+        font-size: 55px;
     }
 
-    .box_btn{
-        .btn{
-            padding:10px 10px 0 0 ;
-            a{
-                display:block;
-                text-decoration:none;
-                color:white;
-                font-family: 'Montserrat', sans-serif;
-                font-weight:600;
-                padding:15px 25px;
-                border-radius:50px;
-                border:2px solid #aceb2f;
-                font-size:14px;
+    @media screen and (max-width:415px){
+        font-size: 35px;
+    }
 
-                @media screen and (max-width:415px){
-                    padding: 10px 15px;
-                    font-size: 10px;
-                }
-            }
-
-
-        }
+    @media screen and (max-width:380px){
+        font-size: 25px;
     }
 `
+
+const Content_p = styled.p`
+    max-width:100%;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 35px;
+    margin: 19px 0 40px 0;
+    font-family: 'Montserrat', sans-serif;
+
+    @media screen and (max-width:768px){
+        font-size: 18px;
+    }
+
+    @media screen and (max-width:415px){
+        font-size: 12px;
+        margin: 10px 0;
+    }
+`
+
 const Right_content = styled.div`
     width:100%;
     padding: 2.5rem 0;
@@ -227,69 +205,6 @@ const Box_right = styled.div`
     padding:45px 40px;
     border-radius: 10px;
 
-    .title_box{
-        color:#aceb2f;
-        font-size: 24px;
-        font-family: 'Montserrat', sans-serif;
-        font-weight:600;
-        margin-bottom:40px;
-
-        @media screen and (max-width:415px){
-            font-size: 14px;
-            margin-bottom: 20px;
-        }
-    }
-
-    .box_time{
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        margin-bottom:40px;
-        flex-wrap: wrap;
-        justify-content: center;
-        @media screen and (max-width:415px){
-            margin-bottom: 20px;
-        }
-    }
-
-    .item_time{
-        width: 20%;
-        margin: 0 7px;
-
-        @media screen and (max-width: 768px){
-            width:40%;
-
-        }
-
-
-
-    }
-
-    .num_time{
-        width:100%;
-        text-align:center;
-        font-size:55px;
-        font-weight:600;
-        font-family: 'Montserrat', sans-serif;
-        border-radius: 10px;
-        background: white;
-
-        @media screen and (max-width: 415px){
-            font-size: 25px;
-        }
-    }
-    .text_time{
-        width:100%;
-        text-align: center;
-        margin-top:7px;
-        color:white;
-        font-family: 'Roboto', sans-serif;
-
-        @media screen and (max-width: 415px){
-            font-size: 14px;
-        }
-    }
-
     .btn{
         width:100%;
         a{
@@ -303,60 +218,120 @@ const Box_right = styled.div`
             border:2px solid #aceb2f;
             font-size:14px;
 
-            @media screen and (max-width:415px){
-                padding: 10px 15px;
-                font-size: 10px;
-            }
+            
         }
     }
-    .box_pro{
-        margin:40px 0;
+`
 
-        .text_pro{
-            width:100%;
-            color:white;
-            span{
-                width:50%;
-                float:left;
-                margin-bottom:10px;
-                &.tl{
-                    text-align:left;
-                }
+const Title_box = styled.div`
+    color:#aceb2f;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight:600;
+    margin-bottom:40px;
 
-                &.tr{
-                    text-align:right;
-                }
+    @media screen and (max-width:415px){
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
 
-                @media screen and (max-width:600px){
-                    font-size: 12px;
-                }
+`
 
-                @media screen and (max-width:415px){
-                    font-size: 10px;
-                }
-            }
+const Box_time= styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom:40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    @media screen and (max-width:415px){
+        margin-bottom: 20px;
+    }
+`
+
+const Item_Time = styled.div`
+    width: 20%;
+    margin: 0 7px;
+
+    @media screen and (max-width: 768px){
+        width:40%;
+
+    }
+`
+
+const Num_time = styled.div`
+    width:100%;
+    text-align:center;
+    font-size:55px;
+    font-weight:600;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 10px;
+    background: white;
+
+    @media screen and (max-width: 415px){
+        font-size: 25px;
+    }
+`
+
+const Text_time = styled.div`
+    width:100%;
+    text-align: center;
+    margin-top:7px;
+    color:white;
+    font-family: 'Roboto', sans-serif;
+
+    @media screen and (max-width: 415px){
+        font-size: 14px;
+    }
+`
+
+const Box_pro = styled. div`
+    margin:40px 0;
+
+    .clear{
+        clear:both;
+    }
+
+    .progress{
+        margin-bottom:10px;
+        background:black;
+        height:13px;
+        border-radius:20px;
+
+        @media screen and (max-width:600px){
+            height: 7px;
         }
-        .clear{
-            clear:both;
+
+        .progress-bar{
+            position:relative;
+            background:transparent;
+        }
+    }
+`
+
+const Text_pro = styled.div`
+    width:100%;
+    color:white;
+
+    span{
+        width:50%;
+        float:left;
+        margin-bottom:10px;
+        &.tl{
+            text-align:left;
         }
 
-        .progress{
-            margin-bottom:10px;
-            background:black;
-            height:13px;
-            border-radius:20px;
-
-            @media screen and (max-width:600px){
-                height: 7px;
-            }
-
-            .progress-bar{
-                position:relative;
-                background:transparent;
-            }
+        &.tr{
+            text-align:right;
         }
 
+        @media screen and (max-width:600px){
+            font-size: 12px;
+        }
 
+        @media screen and (max-width:415px){
+            font-size: 10px;
+        }
     }
 `
 
