@@ -11,19 +11,19 @@ function Quality() {
                 src:'../../images/h1-custom-icon-img-12.png',
                 percent:'75%',
                 ability:'Sercurity',
-                delay: '0.1s'
+                delay: '100'
             },
             {
                 src:'../../images/h1-custom-icon-img-13.png',
                 percent:'150%',
                 ability:'Transparency',
-                delay: '0.3s'
+                delay: '200'
             },
             {
                 src:'../../images/h1-custom-icon-img-14.png',
                 percent:'220%',
                 ability:'Professional',
-                delay: '0.5s'
+                delay: '300'
             }
         ]
     }
@@ -55,7 +55,7 @@ function Quality() {
                         <ContentHolder>
                             <ContentFlex>
                                 {state.item.map(item => (
-                                    <ContentItem className="wow fadeInUp" data-wow-delay={item.delay} duration="0.2s">
+                                    <ContentItem  data-aos="fade-up" data-aos-delay={item.delay}  data-aos-once="true">
                                         <Image src={item.src}/>
                                         <Percent>{item.percent}</Percent>
                                         <Ability>{item.ability}</Ability>

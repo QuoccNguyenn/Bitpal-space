@@ -31,8 +31,9 @@ function Roadmap() {
     const state = {
         item:[
             {
-                class: 'bottom-roadmap wow fadeInUp',
-                delay: '0.2s',
+                class: 'bottom-roadmap ',
+                delay: '200',
+                run:"fade-down",
                 styleDate: {
                     bottom: '32px'
                 },
@@ -52,7 +53,8 @@ function Roadmap() {
             },
             {
                 class: 'wow fadeInDown',
-                delay: '0.4s',
+                delay: '400',
+                run:"fade-up",
                 styleDate: {
                     top: '32px'
                 },
@@ -72,8 +74,9 @@ function Roadmap() {
                 content: 'Aliquam lorem ante, dapi bus in, viverra quis, feugi at a, tel lus. Phaselus vive'
             },
             {
-                class: 'bottom-roadmap wow fadeInUp',
-                delay: '0.6s',
+                class: 'bottom-roadmap',
+                delay: '600',
+                run:"fade-down",
                 styleDate: {
                     bottom: '32px'
                 },
@@ -92,8 +95,9 @@ function Roadmap() {
                 content: 'Lorem ipsum dolor sitam et consectetuer adipisci elit lorem ipsum'
             },
             {
-                class:'wow fadeInUp',
-                delay: '0.8s',
+                class:'',
+                delay: '800',
+                run:"fade-up",
                 styleDate: {
                     top: '32px'
                 },
@@ -112,7 +116,7 @@ function Roadmap() {
                 content: 'Aliquam lorem ante dapi busin, viverra quis feugia ta tellus. Phaselus viverra nulla ut metus us. Aenea imperdiet quis que rut'
             },
             {
-                class: 'bottom-roadmap wow fadeInUp',
+                class: 'bottom-roadmap ',
                 styleDate: {
                     bottom: '32px'
                 },
@@ -131,7 +135,7 @@ function Roadmap() {
                 content: 'Aliquam lorem ante, dapibus in, viverra qui, feugit a, telus pha sel.'
             },
             {
-                class:'wow fadeInUp',
+                class:'',
                 styleDate: {
                     top: '32px'
                 },
@@ -150,7 +154,7 @@ function Roadmap() {
                 content: 'Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phaselus viverra nulla ut metus us.'
             },
             {
-                class: 'bottom-roadmap wow fadeInUp',
+                class: 'bottom-roadmap ',
                 styleDate: {
                     bottom: '32px'
                 },
@@ -169,7 +173,7 @@ function Roadmap() {
                 content: 'Donec quam felis ultricie snec pelente sqeu preti unquis sem nulla conseq'
             },
             {
-                class: 'wow fadeInUp',
+                class: '',
                 styleDate: {
                     top: '32px'
                 },
@@ -205,7 +209,7 @@ function Roadmap() {
                                             <Dot/>
                                             <Line style={item.styleLinebelow}/>
                                         </RoadmapLiner>
-                                        <RoadmapContent className={item.class} data-wow-delay={item.delay} style={item.styleContent}>
+                                        <RoadmapContent className={item.class} data-aos={item.run} data-aos-delay={item.delay} data-aos-once="true" style={item.styleContent}>
                                             <h5>{item.title}</h5>
                                             <Content>{item.content}</Content>
                                         </RoadmapContent>

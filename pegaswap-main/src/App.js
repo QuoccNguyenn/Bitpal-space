@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import NavBar from './components/nav/nav';
 import Home from './view/Home/Home';
@@ -20,6 +20,7 @@ const App = () => {
   }
 
   window.addEventListener('scroll',changedBackground)
+
 
   return(
     <Box_app>

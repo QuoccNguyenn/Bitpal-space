@@ -9,34 +9,34 @@ function Feature() {
             {
                 src:'../../images/h1-custom-icon-img-15.png',
                 title: 'Predictions',
-                delay:'0.1s'
+                delay:'100'
             },
             {
                 src:'../../images/h1-custom-icon-img-16.png',
                 title: 'Innovation',
-                delay:'0.2s'
+                delay:'200'
             },
             {
                 src:'../../images/h1-custom-icon-img-16.png',
                 title: 'Network',
-                delay:'0.3s'
+                delay:'300'
             }
         ],
         contentRight:[
             {
                 src:'../../images/h1-custom-icon-img-18.png',
                 title: 'Trafficking',
-                delay:'0.1s'
+                delay:'100'
             },
             {
                 src:'../../images/h1-custom-icon-img-19.png',
                 title: 'Sercurity',
-                delay:'0.2s'
+                delay:'200'
             },
             {
                 src:'../../images/h1-custom-icon-img-20.png',
                 title: 'Sell and buy',
-                delay:'0.3s'
+                delay:'300'
             }
         ]
     }
@@ -62,7 +62,7 @@ function Feature() {
                         <ContentHolderLeft>
                             <ContentLeft>
                                 {state.contentLeft.map(item => (
-                                    <SubContent className="wow fadeInLeft" data-wow-delay={item.delay}>
+                                    <SubContent data-aos="fade-left" data-aos-delay={`${item.delay}`} data-aos-once="true">
                                         <Image src={item.src}/>
                                         <Title>{item.title}</Title>
                                         <Content>
@@ -82,7 +82,7 @@ function Feature() {
                         <ContentHolderRight>
                             <ContentRight>
                                 {state.contentRight.map(item => (
-                                    <SubContentRight className="wow fadeInRight" data-wow-delay={item.delay}>
+                                    <SubContentRight data-aos="fade-right" data-aos-delay={`${item.delay}`} data-aos-once="true">
                                         <Image src={item.src}/>
                                         <Title>{item.title}</Title>
                                         <InnerContentRight>

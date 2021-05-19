@@ -1,31 +1,34 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
-import WOW from 'wowjs';
+import Aos from'aos'
+import "aos/dist/aos.css"
+
 
 const Introduce=()=> {
 
-    new WOW.WOW({
-        live: false
-    }).init();
+    useEffect(()=>{
+        Aos.init({duration:2000 })
+        
+    })
 
     return(
         <Box_intro>
             <div className="container">
                 <WrapperItro>
 
-                    <Item className=" wow fadeInUp" data-wow-delay="0.1s" duration="0.2s">
+                    <Item className=" wow fadeInUp" data-aos="fade-up" data-aos-delay="100"  data-aos-once="true">
                         <img src="https://bitpal.qodeinteractive.com/wp-content/uploads/2018/07/h1-custom-icon-img-1.png" alt="" />
                         <Intro_h4>Virtual Database</Intro_h4>
                         <Intro_p>Lorem ipsum dolor sit amet, consectetuer adi piscing elit. Aenean commodo ligula eget dolor. Aenean massa cum</Intro_p>
                     </Item>
 
-                    <Item className=" wow fadeInUp" data-wow-delay="0.2s">
+                    <Item className=" wow fadeInUp" data-aos="fade-up" data-aos-delay="200" data-aos-once="true">
                         <img src="https://bitpal.qodeinteractive.com/wp-content/uploads/2018/07/h1-custom-icon-img-2.png" alt="" />
                         <Intro_h4>Secured Money</Intro_h4>
                         <Intro_p>Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Pha sel lus viverra nullaut metus var ius laret. Iuiue rut ruman nan</Intro_p>
                     </Item>
 
-                    <Item className=" wow fadeInUp" data-wow-delay="0.3s">
+                    <Item className=" wow fadeInUp"  data-aos="fade-up" data-aos-delay="300" data-aos-once="true">
                         <img src="https://bitpal.qodeinteractive.com/wp-content/uploads/2018/07/h1-custom-icon-img-3.png" alt="" />
                         <Intro_h4>Private Legal</Intro_h4>
                         <Intro_p>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo</Intro_p>
